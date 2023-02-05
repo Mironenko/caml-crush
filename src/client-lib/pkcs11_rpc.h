@@ -6,13 +6,9 @@
 #ifndef _PKCS11_RPC_H_RPCGEN
 #define _PKCS11_RPC_H_RPCGEN
 
+#define RPCGEN_VERSION	199506
+
 #include <rpc/rpc.h>
-
-#include <pthread.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 #ifdef WIN32
 #include <stdint.h>
@@ -20,40 +16,168 @@ extern "C" {
 #endif
 extern CLIENT *cl;
 
-typedef quad_t pkcs11_int;
+typedef int64_t pkcs11_int;
+#ifdef __cplusplus
+extern "C" bool_t xdr_pkcs11_int(XDR *, pkcs11_int*);
+#elif __STDC__
+extern  bool_t xdr_pkcs11_int(XDR *, pkcs11_int*);
+#else /* Old Style C */
+bool_t xdr_pkcs11_int();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_rv_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_rv_t(XDR *, rpc_ck_rv_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_rv_t(XDR *, rpc_ck_rv_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_rv_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_slot_id_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_slot_id_t(XDR *, rpc_ck_slot_id_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_slot_id_t(XDR *, rpc_ck_slot_id_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_slot_id_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_mechanism_type_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_mechanism_type_t(XDR *, rpc_ck_mechanism_type_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_mechanism_type_t(XDR *, rpc_ck_mechanism_type_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_mechanism_type_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_session_handle_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_session_handle_t(XDR *, rpc_ck_session_handle_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_session_handle_t(XDR *, rpc_ck_session_handle_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_session_handle_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_user_type_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_user_type_t(XDR *, rpc_ck_user_type_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_user_type_t(XDR *, rpc_ck_user_type_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_user_type_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_state_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_state_t(XDR *, rpc_ck_state_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_state_t(XDR *, rpc_ck_state_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_state_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_object_handle_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_object_handle_t(XDR *, rpc_ck_object_handle_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_object_handle_t(XDR *, rpc_ck_object_handle_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_object_handle_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_object_class_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_object_class_t(XDR *, rpc_ck_object_class_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_object_class_t(XDR *, rpc_ck_object_class_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_object_class_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_hw_feature_type_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_hw_feature_type_t(XDR *, rpc_ck_hw_feature_type_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_hw_feature_type_t(XDR *, rpc_ck_hw_feature_type_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_hw_feature_type_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_key_type_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_key_type_t(XDR *, rpc_ck_key_type_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_key_type_t(XDR *, rpc_ck_key_type_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_key_type_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_certificate_type_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_certificate_type_t(XDR *, rpc_ck_certificate_type_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_certificate_type_t(XDR *, rpc_ck_certificate_type_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_certificate_type_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_attribute_type_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_attribute_type_t(XDR *, rpc_ck_attribute_type_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_attribute_type_t(XDR *, rpc_ck_attribute_type_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_attribute_type_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_flags_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_flags_t(XDR *, rpc_ck_flags_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_flags_t(XDR *, rpc_ck_flags_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_flags_t();
+#endif /* Old Style C */
+
 
 typedef pkcs11_int rpc_ck_notification_t;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_notification_t(XDR *, rpc_ck_notification_t*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_notification_t(XDR *, rpc_ck_notification_t*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_notification_t();
+#endif /* Old Style C */
+
 
 typedef struct {
 	u_int opaque_data_len;
 	char *opaque_data_val;
 } opaque_data;
+#ifdef __cplusplus
+extern "C" bool_t xdr_opaque_data(XDR *, opaque_data*);
+#elif __STDC__
+extern  bool_t xdr_opaque_data(XDR *, opaque_data*);
+#else /* Old Style C */
+bool_t xdr_opaque_data();
+#endif /* Old Style C */
+
 
 struct rpc_ck_version {
 	struct {
@@ -66,6 +190,14 @@ struct rpc_ck_version {
 	} minor;
 };
 typedef struct rpc_ck_version rpc_ck_version;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_version(XDR *, rpc_ck_version*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_version(XDR *, rpc_ck_version*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_version();
+#endif /* Old Style C */
+
 
 struct rpc_ck_info {
 	rpc_ck_version rpc_ck_info_cryptoki_version;
@@ -81,6 +213,14 @@ struct rpc_ck_info {
 	rpc_ck_version rpc_ck_info_library_version;
 };
 typedef struct rpc_ck_info rpc_ck_info;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_info(XDR *, rpc_ck_info*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_info(XDR *, rpc_ck_info*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_info();
+#endif /* Old Style C */
+
 
 struct rpc_ck_slot_info {
 	struct {
@@ -96,6 +236,14 @@ struct rpc_ck_slot_info {
 	rpc_ck_version rpc_ck_slot_info_firmware_version;
 };
 typedef struct rpc_ck_slot_info rpc_ck_slot_info;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_slot_info(XDR *, rpc_ck_slot_info*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_slot_info(XDR *, rpc_ck_slot_info*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_slot_info();
+#endif /* Old Style C */
+
 
 struct rpc_ck_token_info {
 	struct {
@@ -133,6 +281,14 @@ struct rpc_ck_token_info {
 	} rpc_ck_token_info_utc_time;
 };
 typedef struct rpc_ck_token_info rpc_ck_token_info;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_token_info(XDR *, rpc_ck_token_info*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_token_info(XDR *, rpc_ck_token_info*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_token_info();
+#endif /* Old Style C */
+
 
 struct rpc_ck_mechanism {
 	rpc_ck_mechanism_type_t rpc_ck_mechanism_mechanism;
@@ -142,6 +298,14 @@ struct rpc_ck_mechanism {
 	} rpc_ck_mechanism_parameter;
 };
 typedef struct rpc_ck_mechanism rpc_ck_mechanism;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_mechanism(XDR *, rpc_ck_mechanism*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_mechanism(XDR *, rpc_ck_mechanism*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_mechanism();
+#endif /* Old Style C */
+
 
 struct rpc_ck_session_info {
 	rpc_ck_slot_id_t rpc_ck_session_info_slot_id;
@@ -150,6 +314,14 @@ struct rpc_ck_session_info {
 	pkcs11_int rpc_ck_session_info_device_error;
 };
 typedef struct rpc_ck_session_info rpc_ck_session_info;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_session_info(XDR *, rpc_ck_session_info*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_session_info(XDR *, rpc_ck_session_info*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_session_info();
+#endif /* Old Style C */
+
 
 struct rpc_ck_mechanism_info {
 	pkcs11_int rpc_ck_mechanism_info_min_key_size;
@@ -157,6 +329,14 @@ struct rpc_ck_mechanism_info {
 	rpc_ck_flags_t rpc_ck_mechanism_info_flags;
 };
 typedef struct rpc_ck_mechanism_info rpc_ck_mechanism_info;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_mechanism_info(XDR *, rpc_ck_mechanism_info*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_mechanism_info(XDR *, rpc_ck_mechanism_info*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_mechanism_info();
+#endif /* Old Style C */
+
 
 struct rpc_ck_attribute {
 	rpc_ck_attribute_type_t rpc_ck_attribute_type;
@@ -167,11 +347,27 @@ struct rpc_ck_attribute {
 	pkcs11_int rpc_ck_attribute_value_len;
 };
 typedef struct rpc_ck_attribute rpc_ck_attribute;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_attribute(XDR *, rpc_ck_attribute*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_attribute(XDR *, rpc_ck_attribute*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_attribute();
+#endif /* Old Style C */
+
 
 typedef struct {
 	u_int rpc_ck_attribute_array_len;
 	rpc_ck_attribute *rpc_ck_attribute_array_val;
 } rpc_ck_attribute_array;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_attribute_array(XDR *, rpc_ck_attribute_array*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_attribute_array(XDR *, rpc_ck_attribute_array*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_attribute_array();
+#endif /* Old Style C */
+
 
 struct rpc_ck_date {
 	struct {
@@ -188,6 +384,14 @@ struct rpc_ck_date {
 	} rpc_ck_date_day;
 };
 typedef struct rpc_ck_date rpc_ck_date;
+#ifdef __cplusplus
+extern "C" bool_t xdr_rpc_ck_date(XDR *, rpc_ck_date*);
+#elif __STDC__
+extern  bool_t xdr_rpc_ck_date(XDR *, rpc_ck_date*);
+#else /* Old Style C */
+bool_t xdr_rpc_ck_date();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetSlotList {
 	rpc_ck_rv_t c_GetSlotList_rv;
@@ -198,36 +402,84 @@ struct ck_rv_c_GetSlotList {
 	pkcs11_int c_GetSlotList_count;
 };
 typedef struct ck_rv_c_GetSlotList ck_rv_c_GetSlotList;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetSlotList(XDR *, ck_rv_c_GetSlotList*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetSlotList(XDR *, ck_rv_c_GetSlotList*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetSlotList();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetSlotInfo {
 	rpc_ck_rv_t c_GetSlotInfo_rv;
 	rpc_ck_slot_info c_GetSlotInfo_slot_info;
 };
 typedef struct ck_rv_c_GetSlotInfo ck_rv_c_GetSlotInfo;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetSlotInfo(XDR *, ck_rv_c_GetSlotInfo*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetSlotInfo(XDR *, ck_rv_c_GetSlotInfo*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetSlotInfo();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetTokenInfo {
 	rpc_ck_rv_t c_GetTokenInfo_rv;
 	rpc_ck_token_info c_GetTokenInfo_token_info;
 };
 typedef struct ck_rv_c_GetTokenInfo ck_rv_c_GetTokenInfo;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetTokenInfo(XDR *, ck_rv_c_GetTokenInfo*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetTokenInfo(XDR *, ck_rv_c_GetTokenInfo*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetTokenInfo();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetInfo {
 	rpc_ck_rv_t c_GetInfo_rv;
 	rpc_ck_info c_GetInfo_info;
 };
 typedef struct ck_rv_c_GetInfo ck_rv_c_GetInfo;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetInfo(XDR *, ck_rv_c_GetInfo*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetInfo(XDR *, ck_rv_c_GetInfo*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetInfo();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_WaitForSlotEvent {
 	rpc_ck_rv_t c_WaitForSlotEvent_rv;
 	rpc_ck_slot_id_t c_WaitForSlotEvent_count;
 };
 typedef struct ck_rv_c_WaitForSlotEvent ck_rv_c_WaitForSlotEvent;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_WaitForSlotEvent(XDR *, ck_rv_c_WaitForSlotEvent*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_WaitForSlotEvent(XDR *, ck_rv_c_WaitForSlotEvent*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_WaitForSlotEvent();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_OpenSession {
 	rpc_ck_rv_t c_OpenSession_rv;
 	rpc_ck_session_handle_t c_OpenSession_handle;
 };
 typedef struct ck_rv_c_OpenSession ck_rv_c_OpenSession;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_OpenSession(XDR *, ck_rv_c_OpenSession*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_OpenSession(XDR *, ck_rv_c_OpenSession*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_OpenSession();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetMechanismList {
 	rpc_ck_rv_t c_GetMechanismList_rv;
@@ -238,18 +490,42 @@ struct ck_rv_c_GetMechanismList {
 	pkcs11_int c_GetMechanismList_count;
 };
 typedef struct ck_rv_c_GetMechanismList ck_rv_c_GetMechanismList;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetMechanismList(XDR *, ck_rv_c_GetMechanismList*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetMechanismList(XDR *, ck_rv_c_GetMechanismList*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetMechanismList();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetSessionInfo {
 	rpc_ck_rv_t c_GetSessionInfo_rv;
 	rpc_ck_session_info c_GetSessionInfo_info;
 };
 typedef struct ck_rv_c_GetSessionInfo ck_rv_c_GetSessionInfo;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetSessionInfo(XDR *, ck_rv_c_GetSessionInfo*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetSessionInfo(XDR *, ck_rv_c_GetSessionInfo*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetSessionInfo();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetMechanismInfo {
 	rpc_ck_rv_t c_GetMechanismInfo_rv;
 	rpc_ck_mechanism_info c_GetMechanismInfo_info;
 };
 typedef struct ck_rv_c_GetMechanismInfo ck_rv_c_GetMechanismInfo;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetMechanismInfo(XDR *, ck_rv_c_GetMechanismInfo*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetMechanismInfo(XDR *, ck_rv_c_GetMechanismInfo*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetMechanismInfo();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GenerateRandom {
 	rpc_ck_rv_t c_GenerateRandom_rv;
@@ -259,6 +535,14 @@ struct ck_rv_c_GenerateRandom {
 	} c_GenerateRandom_data;
 };
 typedef struct ck_rv_c_GenerateRandom ck_rv_c_GenerateRandom;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GenerateRandom(XDR *, ck_rv_c_GenerateRandom*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GenerateRandom(XDR *, ck_rv_c_GenerateRandom*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GenerateRandom();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_FindObjects {
 	rpc_ck_rv_t c_FindObjects_rv;
@@ -269,12 +553,28 @@ struct ck_rv_c_FindObjects {
 	pkcs11_int c_FindObjects_count;
 };
 typedef struct ck_rv_c_FindObjects ck_rv_c_FindObjects;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_FindObjects(XDR *, ck_rv_c_FindObjects*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_FindObjects(XDR *, ck_rv_c_FindObjects*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_FindObjects();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GenerateKey {
 	rpc_ck_rv_t c_GenerateKey_rv;
 	rpc_ck_object_handle_t c_GenerateKey_handle;
 };
 typedef struct ck_rv_c_GenerateKey ck_rv_c_GenerateKey;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GenerateKey(XDR *, ck_rv_c_GenerateKey*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GenerateKey(XDR *, ck_rv_c_GenerateKey*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GenerateKey();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GenerateKeyPair {
 	rpc_ck_rv_t c_GenerateKeyPair_rv;
@@ -282,30 +582,70 @@ struct ck_rv_c_GenerateKeyPair {
 	rpc_ck_object_handle_t c_GenerateKeyPair_privhandle;
 };
 typedef struct ck_rv_c_GenerateKeyPair ck_rv_c_GenerateKeyPair;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GenerateKeyPair(XDR *, ck_rv_c_GenerateKeyPair*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GenerateKeyPair(XDR *, ck_rv_c_GenerateKeyPair*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GenerateKeyPair();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_CreateObject {
 	rpc_ck_rv_t c_CreateObject_rv;
 	rpc_ck_object_handle_t c_CreateObject_handle;
 };
 typedef struct ck_rv_c_CreateObject ck_rv_c_CreateObject;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_CreateObject(XDR *, ck_rv_c_CreateObject*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_CreateObject(XDR *, ck_rv_c_CreateObject*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_CreateObject();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_CopyObject {
 	rpc_ck_rv_t c_CopyObject_rv;
 	rpc_ck_object_handle_t c_CopyObject_handle;
 };
 typedef struct ck_rv_c_CopyObject ck_rv_c_CopyObject;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_CopyObject(XDR *, ck_rv_c_CopyObject*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_CopyObject(XDR *, ck_rv_c_CopyObject*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_CopyObject();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetAttributeValue {
 	rpc_ck_rv_t c_GetAttributeValue_rv;
 	rpc_ck_attribute_array c_GetAttributeValue_value;
 };
 typedef struct ck_rv_c_GetAttributeValue ck_rv_c_GetAttributeValue;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetAttributeValue(XDR *, ck_rv_c_GetAttributeValue*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetAttributeValue(XDR *, ck_rv_c_GetAttributeValue*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetAttributeValue();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetObjectSize {
 	rpc_ck_rv_t c_GetObjectSize_rv;
 	pkcs11_int c_GetObjectSize_size;
 };
 typedef struct ck_rv_c_GetObjectSize ck_rv_c_GetObjectSize;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetObjectSize(XDR *, ck_rv_c_GetObjectSize*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetObjectSize(XDR *, ck_rv_c_GetObjectSize*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetObjectSize();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_WrapKey {
 	rpc_ck_rv_t c_WrapKey_rv;
@@ -315,18 +655,42 @@ struct ck_rv_c_WrapKey {
 	} c_WrapKey_value;
 };
 typedef struct ck_rv_c_WrapKey ck_rv_c_WrapKey;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_WrapKey(XDR *, ck_rv_c_WrapKey*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_WrapKey(XDR *, ck_rv_c_WrapKey*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_WrapKey();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_UnwrapKey {
 	rpc_ck_rv_t c_UnwrapKey_rv;
 	rpc_ck_object_handle_t c_UnwrapKey_handle;
 };
 typedef struct ck_rv_c_UnwrapKey ck_rv_c_UnwrapKey;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_UnwrapKey(XDR *, ck_rv_c_UnwrapKey*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_UnwrapKey(XDR *, ck_rv_c_UnwrapKey*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_UnwrapKey();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DeriveKey {
 	rpc_ck_rv_t c_DeriveKey_rv;
 	rpc_ck_object_handle_t c_DeriveKey_handle;
 };
 typedef struct ck_rv_c_DeriveKey ck_rv_c_DeriveKey;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DeriveKey(XDR *, ck_rv_c_DeriveKey*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DeriveKey(XDR *, ck_rv_c_DeriveKey*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DeriveKey();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_Digest {
 	rpc_ck_rv_t c_Digest_rv;
@@ -336,6 +700,14 @@ struct ck_rv_c_Digest {
 	} c_Digest_value;
 };
 typedef struct ck_rv_c_Digest ck_rv_c_Digest;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_Digest(XDR *, ck_rv_c_Digest*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_Digest(XDR *, ck_rv_c_Digest*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_Digest();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DigestFinal {
 	rpc_ck_rv_t c_DigestFinal_rv;
@@ -345,6 +717,14 @@ struct ck_rv_c_DigestFinal {
 	} c_DigestFinal_value;
 };
 typedef struct ck_rv_c_DigestFinal ck_rv_c_DigestFinal;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DigestFinal(XDR *, ck_rv_c_DigestFinal*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DigestFinal(XDR *, ck_rv_c_DigestFinal*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DigestFinal();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_Sign {
 	rpc_ck_rv_t c_Sign_rv;
@@ -354,6 +734,14 @@ struct ck_rv_c_Sign {
 	} c_Sign_value;
 };
 typedef struct ck_rv_c_Sign ck_rv_c_Sign;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_Sign(XDR *, ck_rv_c_Sign*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_Sign(XDR *, ck_rv_c_Sign*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_Sign();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_SignFinal {
 	rpc_ck_rv_t c_SignFinal_rv;
@@ -363,6 +751,14 @@ struct ck_rv_c_SignFinal {
 	} c_SignFinal_value;
 };
 typedef struct ck_rv_c_SignFinal ck_rv_c_SignFinal;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_SignFinal(XDR *, ck_rv_c_SignFinal*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_SignFinal(XDR *, ck_rv_c_SignFinal*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_SignFinal();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_Encrypt {
 	rpc_ck_rv_t c_Encrypt_rv;
@@ -372,6 +768,14 @@ struct ck_rv_c_Encrypt {
 	} c_Encrypt_value;
 };
 typedef struct ck_rv_c_Encrypt ck_rv_c_Encrypt;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_Encrypt(XDR *, ck_rv_c_Encrypt*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_Encrypt(XDR *, ck_rv_c_Encrypt*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_Encrypt();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_EncryptUpdate {
 	rpc_ck_rv_t c_EncryptUpdate_rv;
@@ -381,6 +785,14 @@ struct ck_rv_c_EncryptUpdate {
 	} c_EncryptUpdate_value;
 };
 typedef struct ck_rv_c_EncryptUpdate ck_rv_c_EncryptUpdate;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_EncryptUpdate(XDR *, ck_rv_c_EncryptUpdate*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_EncryptUpdate(XDR *, ck_rv_c_EncryptUpdate*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_EncryptUpdate();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_EncryptFinal {
 	rpc_ck_rv_t c_EncryptFinal_rv;
@@ -390,6 +802,14 @@ struct ck_rv_c_EncryptFinal {
 	} c_EncryptFinal_value;
 };
 typedef struct ck_rv_c_EncryptFinal ck_rv_c_EncryptFinal;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_EncryptFinal(XDR *, ck_rv_c_EncryptFinal*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_EncryptFinal(XDR *, ck_rv_c_EncryptFinal*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_EncryptFinal();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_Decrypt {
 	rpc_ck_rv_t c_Decrypt_rv;
@@ -399,6 +819,14 @@ struct ck_rv_c_Decrypt {
 	} c_Decrypt_value;
 };
 typedef struct ck_rv_c_Decrypt ck_rv_c_Decrypt;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_Decrypt(XDR *, ck_rv_c_Decrypt*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_Decrypt(XDR *, ck_rv_c_Decrypt*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_Decrypt();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DecryptUpdate {
 	rpc_ck_rv_t c_DecryptUpdate_rv;
@@ -408,6 +836,14 @@ struct ck_rv_c_DecryptUpdate {
 	} c_DecryptUpdate_value;
 };
 typedef struct ck_rv_c_DecryptUpdate ck_rv_c_DecryptUpdate;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DecryptUpdate(XDR *, ck_rv_c_DecryptUpdate*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DecryptUpdate(XDR *, ck_rv_c_DecryptUpdate*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DecryptUpdate();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DecryptFinal {
 	rpc_ck_rv_t c_DecryptFinal_rv;
@@ -417,6 +853,14 @@ struct ck_rv_c_DecryptFinal {
 	} c_DecryptFinal_value;
 };
 typedef struct ck_rv_c_DecryptFinal ck_rv_c_DecryptFinal;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DecryptFinal(XDR *, ck_rv_c_DecryptFinal*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DecryptFinal(XDR *, ck_rv_c_DecryptFinal*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DecryptFinal();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_SignRecover {
 	rpc_ck_rv_t c_SignRecover_rv;
@@ -426,6 +870,14 @@ struct ck_rv_c_SignRecover {
 	} c_SignRecover_value;
 };
 typedef struct ck_rv_c_SignRecover ck_rv_c_SignRecover;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_SignRecover(XDR *, ck_rv_c_SignRecover*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_SignRecover(XDR *, ck_rv_c_SignRecover*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_SignRecover();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_VerifyRecover {
 	rpc_ck_rv_t c_VerifyRecover_rv;
@@ -435,6 +887,14 @@ struct ck_rv_c_VerifyRecover {
 	} c_VerifyRecover_value;
 };
 typedef struct ck_rv_c_VerifyRecover ck_rv_c_VerifyRecover;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_VerifyRecover(XDR *, ck_rv_c_VerifyRecover*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_VerifyRecover(XDR *, ck_rv_c_VerifyRecover*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_VerifyRecover();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DigestEncryptUpdate {
 	rpc_ck_rv_t c_DigestEncryptUpdate_rv;
@@ -444,6 +904,14 @@ struct ck_rv_c_DigestEncryptUpdate {
 	} c_DigestEncryptUpdate_value;
 };
 typedef struct ck_rv_c_DigestEncryptUpdate ck_rv_c_DigestEncryptUpdate;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DigestEncryptUpdate(XDR *, ck_rv_c_DigestEncryptUpdate*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DigestEncryptUpdate(XDR *, ck_rv_c_DigestEncryptUpdate*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DigestEncryptUpdate();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DecryptDigestUpdate {
 	rpc_ck_rv_t c_DecryptDigestUpdate_rv;
@@ -453,6 +921,14 @@ struct ck_rv_c_DecryptDigestUpdate {
 	} c_DecryptDigestUpdate_value;
 };
 typedef struct ck_rv_c_DecryptDigestUpdate ck_rv_c_DecryptDigestUpdate;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DecryptDigestUpdate(XDR *, ck_rv_c_DecryptDigestUpdate*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DecryptDigestUpdate(XDR *, ck_rv_c_DecryptDigestUpdate*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DecryptDigestUpdate();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_SignEncryptUpdate {
 	rpc_ck_rv_t c_SignEncryptUpdate_rv;
@@ -462,6 +938,14 @@ struct ck_rv_c_SignEncryptUpdate {
 	} c_SignEncryptUpdate_value;
 };
 typedef struct ck_rv_c_SignEncryptUpdate ck_rv_c_SignEncryptUpdate;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_SignEncryptUpdate(XDR *, ck_rv_c_SignEncryptUpdate*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_SignEncryptUpdate(XDR *, ck_rv_c_SignEncryptUpdate*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_SignEncryptUpdate();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_DecryptVerifyUpdate {
 	rpc_ck_rv_t c_DecryptVerifyUpdate_rv;
@@ -471,6 +955,14 @@ struct ck_rv_c_DecryptVerifyUpdate {
 	} c_DecryptVerifyUpdate_value;
 };
 typedef struct ck_rv_c_DecryptVerifyUpdate ck_rv_c_DecryptVerifyUpdate;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_DecryptVerifyUpdate(XDR *, ck_rv_c_DecryptVerifyUpdate*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_DecryptVerifyUpdate(XDR *, ck_rv_c_DecryptVerifyUpdate*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_DecryptVerifyUpdate();
+#endif /* Old Style C */
+
 
 struct ck_rv_c_GetOperationState {
 	rpc_ck_rv_t c_GetOperationState_rv;
@@ -480,12 +972,28 @@ struct ck_rv_c_GetOperationState {
 	} c_GetOperationState_value;
 };
 typedef struct ck_rv_c_GetOperationState ck_rv_c_GetOperationState;
+#ifdef __cplusplus
+extern "C" bool_t xdr_ck_rv_c_GetOperationState(XDR *, ck_rv_c_GetOperationState*);
+#elif __STDC__
+extern  bool_t xdr_ck_rv_c_GetOperationState(XDR *, ck_rv_c_GetOperationState*);
+#else /* Old Style C */
+bool_t xdr_ck_rv_c_GetOperationState();
+#endif /* Old Style C */
+
 
 struct c_getslotlist_3_argument {
 	pkcs11_int arg1;
 	pkcs11_int arg2;
 };
 typedef struct c_getslotlist_3_argument c_getslotlist_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_getslotlist_3_argument(XDR *, c_getslotlist_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_getslotlist_3_argument(XDR *, c_getslotlist_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_getslotlist_3_argument();
+#endif /* Old Style C */
+
 
 struct c_login_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -493,30 +1001,70 @@ struct c_login_3_argument {
 	opaque_data arg3;
 };
 typedef struct c_login_3_argument c_login_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_login_3_argument(XDR *, c_login_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_login_3_argument(XDR *, c_login_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_login_3_argument();
+#endif /* Old Style C */
+
 
 struct c_opensession_3_argument {
 	rpc_ck_slot_id_t arg1;
 	rpc_ck_flags_t arg2;
 };
 typedef struct c_opensession_3_argument c_opensession_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_opensession_3_argument(XDR *, c_opensession_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_opensession_3_argument(XDR *, c_opensession_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_opensession_3_argument();
+#endif /* Old Style C */
+
 
 struct c_getmechanismlist_3_argument {
 	rpc_ck_slot_id_t arg1;
 	pkcs11_int arg2;
 };
 typedef struct c_getmechanismlist_3_argument c_getmechanismlist_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_getmechanismlist_3_argument(XDR *, c_getmechanismlist_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_getmechanismlist_3_argument(XDR *, c_getmechanismlist_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_getmechanismlist_3_argument();
+#endif /* Old Style C */
+
 
 struct c_getmechanisminfo_3_argument {
 	rpc_ck_slot_id_t arg1;
 	rpc_ck_mechanism_type_t arg2;
 };
 typedef struct c_getmechanisminfo_3_argument c_getmechanisminfo_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_getmechanisminfo_3_argument(XDR *, c_getmechanisminfo_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_getmechanisminfo_3_argument(XDR *, c_getmechanisminfo_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_getmechanisminfo_3_argument();
+#endif /* Old Style C */
+
 
 struct c_initpin_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_initpin_3_argument c_initpin_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_initpin_3_argument(XDR *, c_initpin_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_initpin_3_argument(XDR *, c_initpin_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_initpin_3_argument();
+#endif /* Old Style C */
+
 
 struct c_setpin_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -524,12 +1072,28 @@ struct c_setpin_3_argument {
 	opaque_data arg3;
 };
 typedef struct c_setpin_3_argument c_setpin_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_setpin_3_argument(XDR *, c_setpin_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_setpin_3_argument(XDR *, c_setpin_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_setpin_3_argument();
+#endif /* Old Style C */
+
 
 struct c_seedrandom_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_seedrandom_3_argument c_seedrandom_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_seedrandom_3_argument(XDR *, c_seedrandom_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_seedrandom_3_argument(XDR *, c_seedrandom_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_seedrandom_3_argument();
+#endif /* Old Style C */
+
 
 struct c_inittoken_3_argument {
 	rpc_ck_slot_id_t arg1;
@@ -537,24 +1101,56 @@ struct c_inittoken_3_argument {
 	opaque_data arg3;
 };
 typedef struct c_inittoken_3_argument c_inittoken_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_inittoken_3_argument(XDR *, c_inittoken_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_inittoken_3_argument(XDR *, c_inittoken_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_inittoken_3_argument();
+#endif /* Old Style C */
+
 
 struct c_generaterandom_3_argument {
 	rpc_ck_session_handle_t arg1;
 	pkcs11_int arg2;
 };
 typedef struct c_generaterandom_3_argument c_generaterandom_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_generaterandom_3_argument(XDR *, c_generaterandom_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_generaterandom_3_argument(XDR *, c_generaterandom_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_generaterandom_3_argument();
+#endif /* Old Style C */
+
 
 struct c_findobjectsinit_3_argument {
 	rpc_ck_session_handle_t arg1;
 	rpc_ck_attribute_array arg2;
 };
 typedef struct c_findobjectsinit_3_argument c_findobjectsinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_findobjectsinit_3_argument(XDR *, c_findobjectsinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_findobjectsinit_3_argument(XDR *, c_findobjectsinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_findobjectsinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_findobjects_3_argument {
 	rpc_ck_session_handle_t arg1;
 	pkcs11_int arg2;
 };
 typedef struct c_findobjects_3_argument c_findobjects_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_findobjects_3_argument(XDR *, c_findobjects_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_findobjects_3_argument(XDR *, c_findobjects_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_findobjects_3_argument();
+#endif /* Old Style C */
+
 
 struct c_generatekey_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -562,6 +1158,14 @@ struct c_generatekey_3_argument {
 	rpc_ck_attribute_array arg3;
 };
 typedef struct c_generatekey_3_argument c_generatekey_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_generatekey_3_argument(XDR *, c_generatekey_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_generatekey_3_argument(XDR *, c_generatekey_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_generatekey_3_argument();
+#endif /* Old Style C */
+
 
 struct c_generatekeypair_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -570,12 +1174,28 @@ struct c_generatekeypair_3_argument {
 	rpc_ck_attribute_array arg4;
 };
 typedef struct c_generatekeypair_3_argument c_generatekeypair_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_generatekeypair_3_argument(XDR *, c_generatekeypair_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_generatekeypair_3_argument(XDR *, c_generatekeypair_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_generatekeypair_3_argument();
+#endif /* Old Style C */
+
 
 struct c_createobject_3_argument {
 	rpc_ck_session_handle_t arg1;
 	rpc_ck_attribute_array arg2;
 };
 typedef struct c_createobject_3_argument c_createobject_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_createobject_3_argument(XDR *, c_createobject_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_createobject_3_argument(XDR *, c_createobject_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_createobject_3_argument();
+#endif /* Old Style C */
+
 
 struct c_copyobject_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -583,12 +1203,28 @@ struct c_copyobject_3_argument {
 	rpc_ck_attribute_array arg3;
 };
 typedef struct c_copyobject_3_argument c_copyobject_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_copyobject_3_argument(XDR *, c_copyobject_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_copyobject_3_argument(XDR *, c_copyobject_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_copyobject_3_argument();
+#endif /* Old Style C */
+
 
 struct c_destroyobject_3_argument {
 	rpc_ck_session_handle_t arg1;
 	rpc_ck_object_handle_t arg2;
 };
 typedef struct c_destroyobject_3_argument c_destroyobject_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_destroyobject_3_argument(XDR *, c_destroyobject_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_destroyobject_3_argument(XDR *, c_destroyobject_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_destroyobject_3_argument();
+#endif /* Old Style C */
+
 
 struct c_getattributevalue_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -596,6 +1232,14 @@ struct c_getattributevalue_3_argument {
 	rpc_ck_attribute_array arg3;
 };
 typedef struct c_getattributevalue_3_argument c_getattributevalue_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_getattributevalue_3_argument(XDR *, c_getattributevalue_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_getattributevalue_3_argument(XDR *, c_getattributevalue_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_getattributevalue_3_argument();
+#endif /* Old Style C */
+
 
 struct c_setattributevalue_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -603,12 +1247,28 @@ struct c_setattributevalue_3_argument {
 	rpc_ck_attribute_array arg3;
 };
 typedef struct c_setattributevalue_3_argument c_setattributevalue_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_setattributevalue_3_argument(XDR *, c_setattributevalue_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_setattributevalue_3_argument(XDR *, c_setattributevalue_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_setattributevalue_3_argument();
+#endif /* Old Style C */
+
 
 struct c_getobjectsize_3_argument {
 	rpc_ck_session_handle_t arg1;
 	rpc_ck_object_handle_t arg2;
 };
 typedef struct c_getobjectsize_3_argument c_getobjectsize_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_getobjectsize_3_argument(XDR *, c_getobjectsize_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_getobjectsize_3_argument(XDR *, c_getobjectsize_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_getobjectsize_3_argument();
+#endif /* Old Style C */
+
 
 struct c_wrapkey_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -617,6 +1277,14 @@ struct c_wrapkey_3_argument {
 	rpc_ck_object_handle_t arg4;
 };
 typedef struct c_wrapkey_3_argument c_wrapkey_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_wrapkey_3_argument(XDR *, c_wrapkey_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_wrapkey_3_argument(XDR *, c_wrapkey_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_wrapkey_3_argument();
+#endif /* Old Style C */
+
 
 struct c_unwrapkey_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -626,6 +1294,14 @@ struct c_unwrapkey_3_argument {
 	rpc_ck_attribute_array arg5;
 };
 typedef struct c_unwrapkey_3_argument c_unwrapkey_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_unwrapkey_3_argument(XDR *, c_unwrapkey_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_unwrapkey_3_argument(XDR *, c_unwrapkey_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_unwrapkey_3_argument();
+#endif /* Old Style C */
+
 
 struct c_derivekey_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -634,30 +1310,70 @@ struct c_derivekey_3_argument {
 	rpc_ck_attribute_array arg4;
 };
 typedef struct c_derivekey_3_argument c_derivekey_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_derivekey_3_argument(XDR *, c_derivekey_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_derivekey_3_argument(XDR *, c_derivekey_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_derivekey_3_argument();
+#endif /* Old Style C */
+
 
 struct c_digestinit_3_argument {
 	rpc_ck_session_handle_t arg1;
 	rpc_ck_mechanism arg2;
 };
 typedef struct c_digestinit_3_argument c_digestinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_digestinit_3_argument(XDR *, c_digestinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_digestinit_3_argument(XDR *, c_digestinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_digestinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_digest_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_digest_3_argument c_digest_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_digest_3_argument(XDR *, c_digest_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_digest_3_argument(XDR *, c_digest_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_digest_3_argument();
+#endif /* Old Style C */
+
 
 struct c_digestupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_digestupdate_3_argument c_digestupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_digestupdate_3_argument(XDR *, c_digestupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_digestupdate_3_argument(XDR *, c_digestupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_digestupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_digestkey_3_argument {
 	rpc_ck_session_handle_t arg1;
 	rpc_ck_object_handle_t arg2;
 };
 typedef struct c_digestkey_3_argument c_digestkey_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_digestkey_3_argument(XDR *, c_digestkey_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_digestkey_3_argument(XDR *, c_digestkey_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_digestkey_3_argument();
+#endif /* Old Style C */
+
 
 struct c_signinit_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -665,18 +1381,42 @@ struct c_signinit_3_argument {
 	rpc_ck_object_handle_t arg3;
 };
 typedef struct c_signinit_3_argument c_signinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_signinit_3_argument(XDR *, c_signinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_signinit_3_argument(XDR *, c_signinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_signinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_sign_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_sign_3_argument c_sign_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_sign_3_argument(XDR *, c_sign_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_sign_3_argument(XDR *, c_sign_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_sign_3_argument();
+#endif /* Old Style C */
+
 
 struct c_signupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_signupdate_3_argument c_signupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_signupdate_3_argument(XDR *, c_signupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_signupdate_3_argument(XDR *, c_signupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_signupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_verifyinit_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -684,6 +1424,14 @@ struct c_verifyinit_3_argument {
 	rpc_ck_object_handle_t arg3;
 };
 typedef struct c_verifyinit_3_argument c_verifyinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_verifyinit_3_argument(XDR *, c_verifyinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_verifyinit_3_argument(XDR *, c_verifyinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_verifyinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_verify_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -691,18 +1439,42 @@ struct c_verify_3_argument {
 	opaque_data arg3;
 };
 typedef struct c_verify_3_argument c_verify_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_verify_3_argument(XDR *, c_verify_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_verify_3_argument(XDR *, c_verify_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_verify_3_argument();
+#endif /* Old Style C */
+
 
 struct c_verifyupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_verifyupdate_3_argument c_verifyupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_verifyupdate_3_argument(XDR *, c_verifyupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_verifyupdate_3_argument(XDR *, c_verifyupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_verifyupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_verifyfinal_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_verifyfinal_3_argument c_verifyfinal_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_verifyfinal_3_argument(XDR *, c_verifyfinal_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_verifyfinal_3_argument(XDR *, c_verifyfinal_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_verifyfinal_3_argument();
+#endif /* Old Style C */
+
 
 struct c_encryptinit_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -710,18 +1482,42 @@ struct c_encryptinit_3_argument {
 	rpc_ck_object_handle_t arg3;
 };
 typedef struct c_encryptinit_3_argument c_encryptinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_encryptinit_3_argument(XDR *, c_encryptinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_encryptinit_3_argument(XDR *, c_encryptinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_encryptinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_encrypt_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_encrypt_3_argument c_encrypt_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_encrypt_3_argument(XDR *, c_encrypt_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_encrypt_3_argument(XDR *, c_encrypt_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_encrypt_3_argument();
+#endif /* Old Style C */
+
 
 struct c_encryptupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_encryptupdate_3_argument c_encryptupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_encryptupdate_3_argument(XDR *, c_encryptupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_encryptupdate_3_argument(XDR *, c_encryptupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_encryptupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_decryptinit_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -729,18 +1525,42 @@ struct c_decryptinit_3_argument {
 	rpc_ck_object_handle_t arg3;
 };
 typedef struct c_decryptinit_3_argument c_decryptinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_decryptinit_3_argument(XDR *, c_decryptinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_decryptinit_3_argument(XDR *, c_decryptinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_decryptinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_decrypt_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_decrypt_3_argument c_decrypt_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_decrypt_3_argument(XDR *, c_decrypt_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_decrypt_3_argument(XDR *, c_decrypt_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_decrypt_3_argument();
+#endif /* Old Style C */
+
 
 struct c_decryptupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_decryptupdate_3_argument c_decryptupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_decryptupdate_3_argument(XDR *, c_decryptupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_decryptupdate_3_argument(XDR *, c_decryptupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_decryptupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_signrecoverinit_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -748,12 +1568,28 @@ struct c_signrecoverinit_3_argument {
 	rpc_ck_object_handle_t arg3;
 };
 typedef struct c_signrecoverinit_3_argument c_signrecoverinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_signrecoverinit_3_argument(XDR *, c_signrecoverinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_signrecoverinit_3_argument(XDR *, c_signrecoverinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_signrecoverinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_signrecover_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_signrecover_3_argument c_signrecover_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_signrecover_3_argument(XDR *, c_signrecover_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_signrecover_3_argument(XDR *, c_signrecover_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_signrecover_3_argument();
+#endif /* Old Style C */
+
 
 struct c_verifyrecoverinit_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -761,36 +1597,84 @@ struct c_verifyrecoverinit_3_argument {
 	rpc_ck_object_handle_t arg3;
 };
 typedef struct c_verifyrecoverinit_3_argument c_verifyrecoverinit_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_verifyrecoverinit_3_argument(XDR *, c_verifyrecoverinit_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_verifyrecoverinit_3_argument(XDR *, c_verifyrecoverinit_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_verifyrecoverinit_3_argument();
+#endif /* Old Style C */
+
 
 struct c_verifyrecover_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_verifyrecover_3_argument c_verifyrecover_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_verifyrecover_3_argument(XDR *, c_verifyrecover_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_verifyrecover_3_argument(XDR *, c_verifyrecover_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_verifyrecover_3_argument();
+#endif /* Old Style C */
+
 
 struct c_digestencryptupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_digestencryptupdate_3_argument c_digestencryptupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_digestencryptupdate_3_argument(XDR *, c_digestencryptupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_digestencryptupdate_3_argument(XDR *, c_digestencryptupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_digestencryptupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_signencryptupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_signencryptupdate_3_argument c_signencryptupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_signencryptupdate_3_argument(XDR *, c_signencryptupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_signencryptupdate_3_argument(XDR *, c_signencryptupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_signencryptupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_decryptdigestupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_decryptdigestupdate_3_argument c_decryptdigestupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_decryptdigestupdate_3_argument(XDR *, c_decryptdigestupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_decryptdigestupdate_3_argument(XDR *, c_decryptdigestupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_decryptdigestupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_decryptverifyupdate_3_argument {
 	rpc_ck_session_handle_t arg1;
 	opaque_data arg2;
 };
 typedef struct c_decryptverifyupdate_3_argument c_decryptverifyupdate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_decryptverifyupdate_3_argument(XDR *, c_decryptverifyupdate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_decryptverifyupdate_3_argument(XDR *, c_decryptverifyupdate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_decryptverifyupdate_3_argument();
+#endif /* Old Style C */
+
 
 struct c_setoperationstate_3_argument {
 	rpc_ck_session_handle_t arg1;
@@ -799,665 +1683,644 @@ struct c_setoperationstate_3_argument {
 	rpc_ck_object_handle_t arg4;
 };
 typedef struct c_setoperationstate_3_argument c_setoperationstate_3_argument;
+#ifdef __cplusplus
+extern "C" bool_t xdr_c_setoperationstate_3_argument(XDR *, c_setoperationstate_3_argument);
+#elif __STDC__
+extern  bool_t xdr_c_setoperationstate_3_argument(XDR *, c_setoperationstate_3_argument);
+#else /* Old Style C */
+bool_t xdr_c_setoperationstate_3_argument();
+#endif /* Old Style C */
 
-#define P 4
-#define V 3
 
-#if defined(__STDC__) || defined(__cplusplus)
-#define c_SetupArch 2
-extern  enum clnt_stat c_setuparch_3(pkcs11_int , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_setuparch_3_svc(pkcs11_int , rpc_ck_rv_t *, struct svc_req *);
-#define c_Initialize 3
-extern  enum clnt_stat c_initialize_3(rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_initialize_3_svc(rpc_ck_rv_t *, struct svc_req *);
-#define c_GetSlotList 4
-extern  enum clnt_stat c_getslotlist_3(pkcs11_int , pkcs11_int , ck_rv_c_GetSlotList *, CLIENT *);
-extern  bool_t c_getslotlist_3_svc(pkcs11_int , pkcs11_int , ck_rv_c_GetSlotList *, struct svc_req *);
-#define c_GetInfo 5
-extern  enum clnt_stat c_getinfo_3(ck_rv_c_GetInfo *, CLIENT *);
-extern  bool_t c_getinfo_3_svc(ck_rv_c_GetInfo *, struct svc_req *);
-#define c_WaitForSlotEvent 6
-extern  enum clnt_stat c_waitforslotevent_3(rpc_ck_flags_t , ck_rv_c_WaitForSlotEvent *, CLIENT *);
-extern  bool_t c_waitforslotevent_3_svc(rpc_ck_flags_t , ck_rv_c_WaitForSlotEvent *, struct svc_req *);
-#define c_GetSlotInfo 7
-extern  enum clnt_stat c_getslotinfo_3(rpc_ck_slot_id_t , ck_rv_c_GetSlotInfo *, CLIENT *);
-extern  bool_t c_getslotinfo_3_svc(rpc_ck_slot_id_t , ck_rv_c_GetSlotInfo *, struct svc_req *);
-#define c_GetTokenInfo 8
-extern  enum clnt_stat c_gettokeninfo_3(rpc_ck_slot_id_t , ck_rv_c_GetTokenInfo *, CLIENT *);
-extern  bool_t c_gettokeninfo_3_svc(rpc_ck_slot_id_t , ck_rv_c_GetTokenInfo *, struct svc_req *);
-#define c_Login 9
-extern  enum clnt_stat c_login_3(rpc_ck_session_handle_t , rpc_ck_user_type_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_login_3_svc(rpc_ck_session_handle_t , rpc_ck_user_type_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_Logout 10
-extern  enum clnt_stat c_logout_3(rpc_ck_session_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_logout_3_svc(rpc_ck_session_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_OpenSession 11
-extern  enum clnt_stat c_opensession_3(rpc_ck_slot_id_t , rpc_ck_flags_t , ck_rv_c_OpenSession *, CLIENT *);
-extern  bool_t c_opensession_3_svc(rpc_ck_slot_id_t , rpc_ck_flags_t , ck_rv_c_OpenSession *, struct svc_req *);
-#define c_CloseSession 12
-extern  enum clnt_stat c_closesession_3(rpc_ck_session_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_closesession_3_svc(rpc_ck_session_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_Finalize 13
-extern  enum clnt_stat c_finalize_3(rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_finalize_3_svc(rpc_ck_rv_t *, struct svc_req *);
-#define c_GetMechanismList 14
-extern  enum clnt_stat c_getmechanismlist_3(rpc_ck_slot_id_t , pkcs11_int , ck_rv_c_GetMechanismList *, CLIENT *);
-extern  bool_t c_getmechanismlist_3_svc(rpc_ck_slot_id_t , pkcs11_int , ck_rv_c_GetMechanismList *, struct svc_req *);
-#define c_CloseAllSessions 15
-extern  enum clnt_stat c_closeallsessions_3(rpc_ck_slot_id_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_closeallsessions_3_svc(rpc_ck_slot_id_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_GetSessionInfo 16
-extern  enum clnt_stat c_getsessioninfo_3(rpc_ck_session_handle_t , ck_rv_c_GetSessionInfo *, CLIENT *);
-extern  bool_t c_getsessioninfo_3_svc(rpc_ck_session_handle_t , ck_rv_c_GetSessionInfo *, struct svc_req *);
-#define c_GetMechanismInfo 17
-extern  enum clnt_stat c_getmechanisminfo_3(rpc_ck_slot_id_t , rpc_ck_mechanism_type_t , ck_rv_c_GetMechanismInfo *, CLIENT *);
-extern  bool_t c_getmechanisminfo_3_svc(rpc_ck_slot_id_t , rpc_ck_mechanism_type_t , ck_rv_c_GetMechanismInfo *, struct svc_req *);
-#define c_InitPIN 18
-extern  enum clnt_stat c_initpin_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_initpin_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_SetPIN 19
-extern  enum clnt_stat c_setpin_3(rpc_ck_session_handle_t , opaque_data , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_setpin_3_svc(rpc_ck_session_handle_t , opaque_data , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_SeedRandom 20
-extern  enum clnt_stat c_seedrandom_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_seedrandom_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_InitToken 21
-extern  enum clnt_stat c_inittoken_3(rpc_ck_slot_id_t , opaque_data , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_inittoken_3_svc(rpc_ck_slot_id_t , opaque_data , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_GenerateRandom 22
-extern  enum clnt_stat c_generaterandom_3(rpc_ck_session_handle_t , pkcs11_int , ck_rv_c_GenerateRandom *, CLIENT *);
-extern  bool_t c_generaterandom_3_svc(rpc_ck_session_handle_t , pkcs11_int , ck_rv_c_GenerateRandom *, struct svc_req *);
-#define c_FindObjectsInit 23
-extern  enum clnt_stat c_findobjectsinit_3(rpc_ck_session_handle_t , rpc_ck_attribute_array , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_findobjectsinit_3_svc(rpc_ck_session_handle_t , rpc_ck_attribute_array , rpc_ck_rv_t *, struct svc_req *);
-#define c_FindObjects 24
-extern  enum clnt_stat c_findobjects_3(rpc_ck_session_handle_t , pkcs11_int , ck_rv_c_FindObjects *, CLIENT *);
-extern  bool_t c_findobjects_3_svc(rpc_ck_session_handle_t , pkcs11_int , ck_rv_c_FindObjects *, struct svc_req *);
-#define c_FindObjectsFinal 25
-extern  enum clnt_stat c_findobjectsfinal_3(rpc_ck_session_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_findobjectsfinal_3_svc(rpc_ck_session_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_GenerateKey 26
-extern  enum clnt_stat c_generatekey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , ck_rv_c_GenerateKey *, CLIENT *);
-extern  bool_t c_generatekey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , ck_rv_c_GenerateKey *, struct svc_req *);
-#define c_GenerateKeyPair 27
-extern  enum clnt_stat c_generatekeypair_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , rpc_ck_attribute_array , ck_rv_c_GenerateKeyPair *, CLIENT *);
-extern  bool_t c_generatekeypair_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , rpc_ck_attribute_array , ck_rv_c_GenerateKeyPair *, struct svc_req *);
-#define c_CreateObject 28
-extern  enum clnt_stat c_createobject_3(rpc_ck_session_handle_t , rpc_ck_attribute_array , ck_rv_c_CreateObject *, CLIENT *);
-extern  bool_t c_createobject_3_svc(rpc_ck_session_handle_t , rpc_ck_attribute_array , ck_rv_c_CreateObject *, struct svc_req *);
-#define c_CopyObject 29
-extern  enum clnt_stat c_copyobject_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , ck_rv_c_CopyObject *, CLIENT *);
-extern  bool_t c_copyobject_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , ck_rv_c_CopyObject *, struct svc_req *);
-#define c_DestroyObject 30
-extern  enum clnt_stat c_destroyobject_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_destroyobject_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_GetAttributeValue 31
-extern  enum clnt_stat c_getattributevalue_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , ck_rv_c_GetAttributeValue *, CLIENT *);
-extern  bool_t c_getattributevalue_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , ck_rv_c_GetAttributeValue *, struct svc_req *);
-#define c_SetAttributeValue 32
-extern  enum clnt_stat c_setattributevalue_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_setattributevalue_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , rpc_ck_rv_t *, struct svc_req *);
-#define c_GetObjectSize 33
-extern  enum clnt_stat c_getobjectsize_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , ck_rv_c_GetObjectSize *, CLIENT *);
-extern  bool_t c_getobjectsize_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , ck_rv_c_GetObjectSize *, struct svc_req *);
-#define c_WrapKey 34
-extern  enum clnt_stat c_wrapkey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_object_handle_t , ck_rv_c_WrapKey *, CLIENT *);
-extern  bool_t c_wrapkey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_object_handle_t , ck_rv_c_WrapKey *, struct svc_req *);
-#define c_UnwrapKey 35
-extern  enum clnt_stat c_unwrapkey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , opaque_data , rpc_ck_attribute_array , ck_rv_c_UnwrapKey *, CLIENT *);
-extern  bool_t c_unwrapkey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , opaque_data , rpc_ck_attribute_array , ck_rv_c_UnwrapKey *, struct svc_req *);
-#define c_DeriveKey 36
-extern  enum clnt_stat c_derivekey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_attribute_array , ck_rv_c_DeriveKey *, CLIENT *);
-extern  bool_t c_derivekey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_attribute_array , ck_rv_c_DeriveKey *, struct svc_req *);
-#define c_DigestInit 37
-extern  enum clnt_stat c_digestinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_digestinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_rv_t *, struct svc_req *);
-#define c_Digest 38
-extern  enum clnt_stat c_digest_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Digest *, CLIENT *);
-extern  bool_t c_digest_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Digest *, struct svc_req *);
-#define c_DigestUpdate 39
-extern  enum clnt_stat c_digestupdate_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_digestupdate_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_DigestFinal 40
-extern  enum clnt_stat c_digestfinal_3(rpc_ck_session_handle_t , ck_rv_c_DigestFinal *, CLIENT *);
-extern  bool_t c_digestfinal_3_svc(rpc_ck_session_handle_t , ck_rv_c_DigestFinal *, struct svc_req *);
-#define c_DigestKey 41
-extern  enum clnt_stat c_digestkey_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_digestkey_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_SignInit 42
-extern  enum clnt_stat c_signinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_signinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_Sign 43
-extern  enum clnt_stat c_sign_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Sign *, CLIENT *);
-extern  bool_t c_sign_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Sign *, struct svc_req *);
-#define c_SignUpdate 44
-extern  enum clnt_stat c_signupdate_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_signupdate_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_SignFinal 45
-extern  enum clnt_stat c_signfinal_3(rpc_ck_session_handle_t , ck_rv_c_SignFinal *, CLIENT *);
-extern  bool_t c_signfinal_3_svc(rpc_ck_session_handle_t , ck_rv_c_SignFinal *, struct svc_req *);
-#define c_VerifyInit 46
-extern  enum clnt_stat c_verifyinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_verifyinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_Verify 47
-extern  enum clnt_stat c_verify_3(rpc_ck_session_handle_t , opaque_data , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_verify_3_svc(rpc_ck_session_handle_t , opaque_data , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_VerifyUpdate 48
-extern  enum clnt_stat c_verifyupdate_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_verifyupdate_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_VerifyFinal 49
-extern  enum clnt_stat c_verifyfinal_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_verifyfinal_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_rv_t *, struct svc_req *);
-#define c_EncryptInit 50
-extern  enum clnt_stat c_encryptinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_encryptinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_Encrypt 51
-extern  enum clnt_stat c_encrypt_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Encrypt *, CLIENT *);
-extern  bool_t c_encrypt_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Encrypt *, struct svc_req *);
-#define c_EncryptUpdate 52
-extern  enum clnt_stat c_encryptupdate_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_EncryptUpdate *, CLIENT *);
-extern  bool_t c_encryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_EncryptUpdate *, struct svc_req *);
-#define c_EncryptFinal 53
-extern  enum clnt_stat c_encryptfinal_3(rpc_ck_session_handle_t , ck_rv_c_EncryptFinal *, CLIENT *);
-extern  bool_t c_encryptfinal_3_svc(rpc_ck_session_handle_t , ck_rv_c_EncryptFinal *, struct svc_req *);
-#define c_DecryptInit 54
-extern  enum clnt_stat c_decryptinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_decryptinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_Decrypt 55
-extern  enum clnt_stat c_decrypt_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Decrypt *, CLIENT *);
-extern  bool_t c_decrypt_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_Decrypt *, struct svc_req *);
-#define c_DecryptUpdate 56
-extern  enum clnt_stat c_decryptupdate_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DecryptUpdate *, CLIENT *);
-extern  bool_t c_decryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DecryptUpdate *, struct svc_req *);
-#define c_DecryptFinal 57
-extern  enum clnt_stat c_decryptfinal_3(rpc_ck_session_handle_t , ck_rv_c_DecryptFinal *, CLIENT *);
-extern  bool_t c_decryptfinal_3_svc(rpc_ck_session_handle_t , ck_rv_c_DecryptFinal *, struct svc_req *);
-#define c_SignRecoverInit 58
-extern  enum clnt_stat c_signrecoverinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_signrecoverinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_SignRecover 59
-extern  enum clnt_stat c_signrecover_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_SignRecover *, CLIENT *);
-extern  bool_t c_signrecover_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_SignRecover *, struct svc_req *);
-#define c_VerifyRecoverInit 60
-extern  enum clnt_stat c_verifyrecoverinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_verifyrecoverinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_VerifyRecover 61
-extern  enum clnt_stat c_verifyrecover_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_VerifyRecover *, CLIENT *);
-extern  bool_t c_verifyrecover_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_VerifyRecover *, struct svc_req *);
-#define c_DigestEncryptUpdate 62
-extern  enum clnt_stat c_digestencryptupdate_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DigestEncryptUpdate *, CLIENT *);
-extern  bool_t c_digestencryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DigestEncryptUpdate *, struct svc_req *);
-#define c_SignEncryptUpdate 63
-extern  enum clnt_stat c_signencryptupdate_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_SignEncryptUpdate *, CLIENT *);
-extern  bool_t c_signencryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_SignEncryptUpdate *, struct svc_req *);
-#define c_DecryptDigestUpdate 64
-extern  enum clnt_stat c_decryptdigestupdate_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DecryptDigestUpdate *, CLIENT *);
-extern  bool_t c_decryptdigestupdate_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DecryptDigestUpdate *, struct svc_req *);
-#define c_DecryptVerifyUpdate 65
-extern  enum clnt_stat c_decryptverifyupdate_3(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DecryptVerifyUpdate *, CLIENT *);
-extern  bool_t c_decryptverifyupdate_3_svc(rpc_ck_session_handle_t , opaque_data , ck_rv_c_DecryptVerifyUpdate *, struct svc_req *);
-#define c_GetOperationState 66
-extern  enum clnt_stat c_getoperationstate_3(rpc_ck_session_handle_t , ck_rv_c_GetOperationState *, CLIENT *);
-extern  bool_t c_getoperationstate_3_svc(rpc_ck_session_handle_t , ck_rv_c_GetOperationState *, struct svc_req *);
-#define c_SetOperationState 67
-extern  enum clnt_stat c_setoperationstate_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_object_handle_t , rpc_ck_object_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_setoperationstate_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_object_handle_t , rpc_ck_object_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_GetFunctionStatus 68
-extern  enum clnt_stat c_getfunctionstatus_3(rpc_ck_session_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_getfunctionstatus_3_svc(rpc_ck_session_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_CancelFunction 69
-extern  enum clnt_stat c_cancelfunction_3(rpc_ck_session_handle_t , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_cancelfunction_3_svc(rpc_ck_session_handle_t , rpc_ck_rv_t *, struct svc_req *);
-#define c_LoadModule 70
-extern  enum clnt_stat c_loadmodule_3(opaque_data , rpc_ck_rv_t *, CLIENT *);
-extern  bool_t c_loadmodule_3_svc(opaque_data , rpc_ck_rv_t *, struct svc_req *);
-extern int p_3_freeresult (SVCXPRT *, xdrproc_t, caddr_t);
-
-#else /* K&R C */
-#define c_SetupArch 2
-extern  enum clnt_stat c_setuparch_3();
-extern  bool_t c_setuparch_3_svc();
-#define c_Initialize 3
-extern  enum clnt_stat c_initialize_3();
-extern  bool_t c_initialize_3_svc();
-#define c_GetSlotList 4
-extern  enum clnt_stat c_getslotlist_3();
-extern  bool_t c_getslotlist_3_svc();
-#define c_GetInfo 5
-extern  enum clnt_stat c_getinfo_3();
-extern  bool_t c_getinfo_3_svc();
-#define c_WaitForSlotEvent 6
-extern  enum clnt_stat c_waitforslotevent_3();
-extern  bool_t c_waitforslotevent_3_svc();
-#define c_GetSlotInfo 7
-extern  enum clnt_stat c_getslotinfo_3();
-extern  bool_t c_getslotinfo_3_svc();
-#define c_GetTokenInfo 8
-extern  enum clnt_stat c_gettokeninfo_3();
-extern  bool_t c_gettokeninfo_3_svc();
-#define c_Login 9
-extern  enum clnt_stat c_login_3();
-extern  bool_t c_login_3_svc();
-#define c_Logout 10
-extern  enum clnt_stat c_logout_3();
-extern  bool_t c_logout_3_svc();
-#define c_OpenSession 11
-extern  enum clnt_stat c_opensession_3();
-extern  bool_t c_opensession_3_svc();
-#define c_CloseSession 12
-extern  enum clnt_stat c_closesession_3();
-extern  bool_t c_closesession_3_svc();
-#define c_Finalize 13
-extern  enum clnt_stat c_finalize_3();
-extern  bool_t c_finalize_3_svc();
-#define c_GetMechanismList 14
-extern  enum clnt_stat c_getmechanismlist_3();
-extern  bool_t c_getmechanismlist_3_svc();
-#define c_CloseAllSessions 15
-extern  enum clnt_stat c_closeallsessions_3();
-extern  bool_t c_closeallsessions_3_svc();
-#define c_GetSessionInfo 16
-extern  enum clnt_stat c_getsessioninfo_3();
-extern  bool_t c_getsessioninfo_3_svc();
-#define c_GetMechanismInfo 17
-extern  enum clnt_stat c_getmechanisminfo_3();
-extern  bool_t c_getmechanisminfo_3_svc();
-#define c_InitPIN 18
-extern  enum clnt_stat c_initpin_3();
-extern  bool_t c_initpin_3_svc();
-#define c_SetPIN 19
-extern  enum clnt_stat c_setpin_3();
-extern  bool_t c_setpin_3_svc();
-#define c_SeedRandom 20
-extern  enum clnt_stat c_seedrandom_3();
-extern  bool_t c_seedrandom_3_svc();
-#define c_InitToken 21
-extern  enum clnt_stat c_inittoken_3();
-extern  bool_t c_inittoken_3_svc();
-#define c_GenerateRandom 22
-extern  enum clnt_stat c_generaterandom_3();
-extern  bool_t c_generaterandom_3_svc();
-#define c_FindObjectsInit 23
-extern  enum clnt_stat c_findobjectsinit_3();
-extern  bool_t c_findobjectsinit_3_svc();
-#define c_FindObjects 24
-extern  enum clnt_stat c_findobjects_3();
-extern  bool_t c_findobjects_3_svc();
-#define c_FindObjectsFinal 25
-extern  enum clnt_stat c_findobjectsfinal_3();
-extern  bool_t c_findobjectsfinal_3_svc();
-#define c_GenerateKey 26
-extern  enum clnt_stat c_generatekey_3();
-extern  bool_t c_generatekey_3_svc();
-#define c_GenerateKeyPair 27
-extern  enum clnt_stat c_generatekeypair_3();
-extern  bool_t c_generatekeypair_3_svc();
-#define c_CreateObject 28
-extern  enum clnt_stat c_createobject_3();
-extern  bool_t c_createobject_3_svc();
-#define c_CopyObject 29
-extern  enum clnt_stat c_copyobject_3();
-extern  bool_t c_copyobject_3_svc();
-#define c_DestroyObject 30
-extern  enum clnt_stat c_destroyobject_3();
-extern  bool_t c_destroyobject_3_svc();
-#define c_GetAttributeValue 31
-extern  enum clnt_stat c_getattributevalue_3();
-extern  bool_t c_getattributevalue_3_svc();
-#define c_SetAttributeValue 32
-extern  enum clnt_stat c_setattributevalue_3();
-extern  bool_t c_setattributevalue_3_svc();
-#define c_GetObjectSize 33
-extern  enum clnt_stat c_getobjectsize_3();
-extern  bool_t c_getobjectsize_3_svc();
-#define c_WrapKey 34
-extern  enum clnt_stat c_wrapkey_3();
-extern  bool_t c_wrapkey_3_svc();
-#define c_UnwrapKey 35
-extern  enum clnt_stat c_unwrapkey_3();
-extern  bool_t c_unwrapkey_3_svc();
-#define c_DeriveKey 36
-extern  enum clnt_stat c_derivekey_3();
-extern  bool_t c_derivekey_3_svc();
-#define c_DigestInit 37
-extern  enum clnt_stat c_digestinit_3();
-extern  bool_t c_digestinit_3_svc();
-#define c_Digest 38
-extern  enum clnt_stat c_digest_3();
-extern  bool_t c_digest_3_svc();
-#define c_DigestUpdate 39
-extern  enum clnt_stat c_digestupdate_3();
-extern  bool_t c_digestupdate_3_svc();
-#define c_DigestFinal 40
-extern  enum clnt_stat c_digestfinal_3();
-extern  bool_t c_digestfinal_3_svc();
-#define c_DigestKey 41
-extern  enum clnt_stat c_digestkey_3();
-extern  bool_t c_digestkey_3_svc();
-#define c_SignInit 42
-extern  enum clnt_stat c_signinit_3();
-extern  bool_t c_signinit_3_svc();
-#define c_Sign 43
-extern  enum clnt_stat c_sign_3();
-extern  bool_t c_sign_3_svc();
-#define c_SignUpdate 44
-extern  enum clnt_stat c_signupdate_3();
-extern  bool_t c_signupdate_3_svc();
-#define c_SignFinal 45
-extern  enum clnt_stat c_signfinal_3();
-extern  bool_t c_signfinal_3_svc();
-#define c_VerifyInit 46
-extern  enum clnt_stat c_verifyinit_3();
-extern  bool_t c_verifyinit_3_svc();
-#define c_Verify 47
-extern  enum clnt_stat c_verify_3();
-extern  bool_t c_verify_3_svc();
-#define c_VerifyUpdate 48
-extern  enum clnt_stat c_verifyupdate_3();
-extern  bool_t c_verifyupdate_3_svc();
-#define c_VerifyFinal 49
-extern  enum clnt_stat c_verifyfinal_3();
-extern  bool_t c_verifyfinal_3_svc();
-#define c_EncryptInit 50
-extern  enum clnt_stat c_encryptinit_3();
-extern  bool_t c_encryptinit_3_svc();
-#define c_Encrypt 51
-extern  enum clnt_stat c_encrypt_3();
-extern  bool_t c_encrypt_3_svc();
-#define c_EncryptUpdate 52
-extern  enum clnt_stat c_encryptupdate_3();
-extern  bool_t c_encryptupdate_3_svc();
-#define c_EncryptFinal 53
-extern  enum clnt_stat c_encryptfinal_3();
-extern  bool_t c_encryptfinal_3_svc();
-#define c_DecryptInit 54
-extern  enum clnt_stat c_decryptinit_3();
-extern  bool_t c_decryptinit_3_svc();
-#define c_Decrypt 55
-extern  enum clnt_stat c_decrypt_3();
-extern  bool_t c_decrypt_3_svc();
-#define c_DecryptUpdate 56
-extern  enum clnt_stat c_decryptupdate_3();
-extern  bool_t c_decryptupdate_3_svc();
-#define c_DecryptFinal 57
-extern  enum clnt_stat c_decryptfinal_3();
-extern  bool_t c_decryptfinal_3_svc();
-#define c_SignRecoverInit 58
-extern  enum clnt_stat c_signrecoverinit_3();
-extern  bool_t c_signrecoverinit_3_svc();
-#define c_SignRecover 59
-extern  enum clnt_stat c_signrecover_3();
-extern  bool_t c_signrecover_3_svc();
-#define c_VerifyRecoverInit 60
-extern  enum clnt_stat c_verifyrecoverinit_3();
-extern  bool_t c_verifyrecoverinit_3_svc();
-#define c_VerifyRecover 61
-extern  enum clnt_stat c_verifyrecover_3();
-extern  bool_t c_verifyrecover_3_svc();
-#define c_DigestEncryptUpdate 62
-extern  enum clnt_stat c_digestencryptupdate_3();
-extern  bool_t c_digestencryptupdate_3_svc();
-#define c_SignEncryptUpdate 63
-extern  enum clnt_stat c_signencryptupdate_3();
-extern  bool_t c_signencryptupdate_3_svc();
-#define c_DecryptDigestUpdate 64
-extern  enum clnt_stat c_decryptdigestupdate_3();
-extern  bool_t c_decryptdigestupdate_3_svc();
-#define c_DecryptVerifyUpdate 65
-extern  enum clnt_stat c_decryptverifyupdate_3();
-extern  bool_t c_decryptverifyupdate_3_svc();
-#define c_GetOperationState 66
-extern  enum clnt_stat c_getoperationstate_3();
-extern  bool_t c_getoperationstate_3_svc();
-#define c_SetOperationState 67
-extern  enum clnt_stat c_setoperationstate_3();
-extern  bool_t c_setoperationstate_3_svc();
-#define c_GetFunctionStatus 68
-extern  enum clnt_stat c_getfunctionstatus_3();
-extern  bool_t c_getfunctionstatus_3_svc();
-#define c_CancelFunction 69
-extern  enum clnt_stat c_cancelfunction_3();
-extern  bool_t c_cancelfunction_3_svc();
-#define c_LoadModule 70
-extern  enum clnt_stat c_loadmodule_3();
-extern  bool_t c_loadmodule_3_svc();
-extern int p_3_freeresult ();
-#endif /* K&R C */
-
-/* the xdr functions */
-
-#if defined(__STDC__) || defined(__cplusplus)
-extern  bool_t xdr_pkcs11_int (XDR *, pkcs11_int*);
-extern  bool_t xdr_rpc_ck_rv_t (XDR *, rpc_ck_rv_t*);
-extern  bool_t xdr_rpc_ck_slot_id_t (XDR *, rpc_ck_slot_id_t*);
-extern  bool_t xdr_rpc_ck_mechanism_type_t (XDR *, rpc_ck_mechanism_type_t*);
-extern  bool_t xdr_rpc_ck_session_handle_t (XDR *, rpc_ck_session_handle_t*);
-extern  bool_t xdr_rpc_ck_user_type_t (XDR *, rpc_ck_user_type_t*);
-extern  bool_t xdr_rpc_ck_state_t (XDR *, rpc_ck_state_t*);
-extern  bool_t xdr_rpc_ck_object_handle_t (XDR *, rpc_ck_object_handle_t*);
-extern  bool_t xdr_rpc_ck_object_class_t (XDR *, rpc_ck_object_class_t*);
-extern  bool_t xdr_rpc_ck_hw_feature_type_t (XDR *, rpc_ck_hw_feature_type_t*);
-extern  bool_t xdr_rpc_ck_key_type_t (XDR *, rpc_ck_key_type_t*);
-extern  bool_t xdr_rpc_ck_certificate_type_t (XDR *, rpc_ck_certificate_type_t*);
-extern  bool_t xdr_rpc_ck_attribute_type_t (XDR *, rpc_ck_attribute_type_t*);
-extern  bool_t xdr_rpc_ck_flags_t (XDR *, rpc_ck_flags_t*);
-extern  bool_t xdr_rpc_ck_notification_t (XDR *, rpc_ck_notification_t*);
-extern  bool_t xdr_opaque_data (XDR *, opaque_data*);
-extern  bool_t xdr_rpc_ck_version (XDR *, rpc_ck_version*);
-extern  bool_t xdr_rpc_ck_info (XDR *, rpc_ck_info*);
-extern  bool_t xdr_rpc_ck_slot_info (XDR *, rpc_ck_slot_info*);
-extern  bool_t xdr_rpc_ck_token_info (XDR *, rpc_ck_token_info*);
-extern  bool_t xdr_rpc_ck_mechanism (XDR *, rpc_ck_mechanism*);
-extern  bool_t xdr_rpc_ck_session_info (XDR *, rpc_ck_session_info*);
-extern  bool_t xdr_rpc_ck_mechanism_info (XDR *, rpc_ck_mechanism_info*);
-extern  bool_t xdr_rpc_ck_attribute (XDR *, rpc_ck_attribute*);
-extern  bool_t xdr_rpc_ck_attribute_array (XDR *, rpc_ck_attribute_array*);
-extern  bool_t xdr_rpc_ck_date (XDR *, rpc_ck_date*);
-extern  bool_t xdr_ck_rv_c_GetSlotList (XDR *, ck_rv_c_GetSlotList*);
-extern  bool_t xdr_ck_rv_c_GetSlotInfo (XDR *, ck_rv_c_GetSlotInfo*);
-extern  bool_t xdr_ck_rv_c_GetTokenInfo (XDR *, ck_rv_c_GetTokenInfo*);
-extern  bool_t xdr_ck_rv_c_GetInfo (XDR *, ck_rv_c_GetInfo*);
-extern  bool_t xdr_ck_rv_c_WaitForSlotEvent (XDR *, ck_rv_c_WaitForSlotEvent*);
-extern  bool_t xdr_ck_rv_c_OpenSession (XDR *, ck_rv_c_OpenSession*);
-extern  bool_t xdr_ck_rv_c_GetMechanismList (XDR *, ck_rv_c_GetMechanismList*);
-extern  bool_t xdr_ck_rv_c_GetSessionInfo (XDR *, ck_rv_c_GetSessionInfo*);
-extern  bool_t xdr_ck_rv_c_GetMechanismInfo (XDR *, ck_rv_c_GetMechanismInfo*);
-extern  bool_t xdr_ck_rv_c_GenerateRandom (XDR *, ck_rv_c_GenerateRandom*);
-extern  bool_t xdr_ck_rv_c_FindObjects (XDR *, ck_rv_c_FindObjects*);
-extern  bool_t xdr_ck_rv_c_GenerateKey (XDR *, ck_rv_c_GenerateKey*);
-extern  bool_t xdr_ck_rv_c_GenerateKeyPair (XDR *, ck_rv_c_GenerateKeyPair*);
-extern  bool_t xdr_ck_rv_c_CreateObject (XDR *, ck_rv_c_CreateObject*);
-extern  bool_t xdr_ck_rv_c_CopyObject (XDR *, ck_rv_c_CopyObject*);
-extern  bool_t xdr_ck_rv_c_GetAttributeValue (XDR *, ck_rv_c_GetAttributeValue*);
-extern  bool_t xdr_ck_rv_c_GetObjectSize (XDR *, ck_rv_c_GetObjectSize*);
-extern  bool_t xdr_ck_rv_c_WrapKey (XDR *, ck_rv_c_WrapKey*);
-extern  bool_t xdr_ck_rv_c_UnwrapKey (XDR *, ck_rv_c_UnwrapKey*);
-extern  bool_t xdr_ck_rv_c_DeriveKey (XDR *, ck_rv_c_DeriveKey*);
-extern  bool_t xdr_ck_rv_c_Digest (XDR *, ck_rv_c_Digest*);
-extern  bool_t xdr_ck_rv_c_DigestFinal (XDR *, ck_rv_c_DigestFinal*);
-extern  bool_t xdr_ck_rv_c_Sign (XDR *, ck_rv_c_Sign*);
-extern  bool_t xdr_ck_rv_c_SignFinal (XDR *, ck_rv_c_SignFinal*);
-extern  bool_t xdr_ck_rv_c_Encrypt (XDR *, ck_rv_c_Encrypt*);
-extern  bool_t xdr_ck_rv_c_EncryptUpdate (XDR *, ck_rv_c_EncryptUpdate*);
-extern  bool_t xdr_ck_rv_c_EncryptFinal (XDR *, ck_rv_c_EncryptFinal*);
-extern  bool_t xdr_ck_rv_c_Decrypt (XDR *, ck_rv_c_Decrypt*);
-extern  bool_t xdr_ck_rv_c_DecryptUpdate (XDR *, ck_rv_c_DecryptUpdate*);
-extern  bool_t xdr_ck_rv_c_DecryptFinal (XDR *, ck_rv_c_DecryptFinal*);
-extern  bool_t xdr_ck_rv_c_SignRecover (XDR *, ck_rv_c_SignRecover*);
-extern  bool_t xdr_ck_rv_c_VerifyRecover (XDR *, ck_rv_c_VerifyRecover*);
-extern  bool_t xdr_ck_rv_c_DigestEncryptUpdate (XDR *, ck_rv_c_DigestEncryptUpdate*);
-extern  bool_t xdr_ck_rv_c_DecryptDigestUpdate (XDR *, ck_rv_c_DecryptDigestUpdate*);
-extern  bool_t xdr_ck_rv_c_SignEncryptUpdate (XDR *, ck_rv_c_SignEncryptUpdate*);
-extern  bool_t xdr_ck_rv_c_DecryptVerifyUpdate (XDR *, ck_rv_c_DecryptVerifyUpdate*);
-extern  bool_t xdr_ck_rv_c_GetOperationState (XDR *, ck_rv_c_GetOperationState*);
-extern  bool_t xdr_c_getslotlist_3_argument (XDR *, c_getslotlist_3_argument*);
-extern  bool_t xdr_c_login_3_argument (XDR *, c_login_3_argument*);
-extern  bool_t xdr_c_opensession_3_argument (XDR *, c_opensession_3_argument*);
-extern  bool_t xdr_c_getmechanismlist_3_argument (XDR *, c_getmechanismlist_3_argument*);
-extern  bool_t xdr_c_getmechanisminfo_3_argument (XDR *, c_getmechanisminfo_3_argument*);
-extern  bool_t xdr_c_initpin_3_argument (XDR *, c_initpin_3_argument*);
-extern  bool_t xdr_c_setpin_3_argument (XDR *, c_setpin_3_argument*);
-extern  bool_t xdr_c_seedrandom_3_argument (XDR *, c_seedrandom_3_argument*);
-extern  bool_t xdr_c_inittoken_3_argument (XDR *, c_inittoken_3_argument*);
-extern  bool_t xdr_c_generaterandom_3_argument (XDR *, c_generaterandom_3_argument*);
-extern  bool_t xdr_c_findobjectsinit_3_argument (XDR *, c_findobjectsinit_3_argument*);
-extern  bool_t xdr_c_findobjects_3_argument (XDR *, c_findobjects_3_argument*);
-extern  bool_t xdr_c_generatekey_3_argument (XDR *, c_generatekey_3_argument*);
-extern  bool_t xdr_c_generatekeypair_3_argument (XDR *, c_generatekeypair_3_argument*);
-extern  bool_t xdr_c_createobject_3_argument (XDR *, c_createobject_3_argument*);
-extern  bool_t xdr_c_copyobject_3_argument (XDR *, c_copyobject_3_argument*);
-extern  bool_t xdr_c_destroyobject_3_argument (XDR *, c_destroyobject_3_argument*);
-extern  bool_t xdr_c_getattributevalue_3_argument (XDR *, c_getattributevalue_3_argument*);
-extern  bool_t xdr_c_setattributevalue_3_argument (XDR *, c_setattributevalue_3_argument*);
-extern  bool_t xdr_c_getobjectsize_3_argument (XDR *, c_getobjectsize_3_argument*);
-extern  bool_t xdr_c_wrapkey_3_argument (XDR *, c_wrapkey_3_argument*);
-extern  bool_t xdr_c_unwrapkey_3_argument (XDR *, c_unwrapkey_3_argument*);
-extern  bool_t xdr_c_derivekey_3_argument (XDR *, c_derivekey_3_argument*);
-extern  bool_t xdr_c_digestinit_3_argument (XDR *, c_digestinit_3_argument*);
-extern  bool_t xdr_c_digest_3_argument (XDR *, c_digest_3_argument*);
-extern  bool_t xdr_c_digestupdate_3_argument (XDR *, c_digestupdate_3_argument*);
-extern  bool_t xdr_c_digestkey_3_argument (XDR *, c_digestkey_3_argument*);
-extern  bool_t xdr_c_signinit_3_argument (XDR *, c_signinit_3_argument*);
-extern  bool_t xdr_c_sign_3_argument (XDR *, c_sign_3_argument*);
-extern  bool_t xdr_c_signupdate_3_argument (XDR *, c_signupdate_3_argument*);
-extern  bool_t xdr_c_verifyinit_3_argument (XDR *, c_verifyinit_3_argument*);
-extern  bool_t xdr_c_verify_3_argument (XDR *, c_verify_3_argument*);
-extern  bool_t xdr_c_verifyupdate_3_argument (XDR *, c_verifyupdate_3_argument*);
-extern  bool_t xdr_c_verifyfinal_3_argument (XDR *, c_verifyfinal_3_argument*);
-extern  bool_t xdr_c_encryptinit_3_argument (XDR *, c_encryptinit_3_argument*);
-extern  bool_t xdr_c_encrypt_3_argument (XDR *, c_encrypt_3_argument*);
-extern  bool_t xdr_c_encryptupdate_3_argument (XDR *, c_encryptupdate_3_argument*);
-extern  bool_t xdr_c_decryptinit_3_argument (XDR *, c_decryptinit_3_argument*);
-extern  bool_t xdr_c_decrypt_3_argument (XDR *, c_decrypt_3_argument*);
-extern  bool_t xdr_c_decryptupdate_3_argument (XDR *, c_decryptupdate_3_argument*);
-extern  bool_t xdr_c_signrecoverinit_3_argument (XDR *, c_signrecoverinit_3_argument*);
-extern  bool_t xdr_c_signrecover_3_argument (XDR *, c_signrecover_3_argument*);
-extern  bool_t xdr_c_verifyrecoverinit_3_argument (XDR *, c_verifyrecoverinit_3_argument*);
-extern  bool_t xdr_c_verifyrecover_3_argument (XDR *, c_verifyrecover_3_argument*);
-extern  bool_t xdr_c_digestencryptupdate_3_argument (XDR *, c_digestencryptupdate_3_argument*);
-extern  bool_t xdr_c_signencryptupdate_3_argument (XDR *, c_signencryptupdate_3_argument*);
-extern  bool_t xdr_c_decryptdigestupdate_3_argument (XDR *, c_decryptdigestupdate_3_argument*);
-extern  bool_t xdr_c_decryptverifyupdate_3_argument (XDR *, c_decryptverifyupdate_3_argument*);
-extern  bool_t xdr_c_setoperationstate_3_argument (XDR *, c_setoperationstate_3_argument*);
-
-#else /* K&R C */
-extern bool_t xdr_pkcs11_int ();
-extern bool_t xdr_rpc_ck_rv_t ();
-extern bool_t xdr_rpc_ck_slot_id_t ();
-extern bool_t xdr_rpc_ck_mechanism_type_t ();
-extern bool_t xdr_rpc_ck_session_handle_t ();
-extern bool_t xdr_rpc_ck_user_type_t ();
-extern bool_t xdr_rpc_ck_state_t ();
-extern bool_t xdr_rpc_ck_object_handle_t ();
-extern bool_t xdr_rpc_ck_object_class_t ();
-extern bool_t xdr_rpc_ck_hw_feature_type_t ();
-extern bool_t xdr_rpc_ck_key_type_t ();
-extern bool_t xdr_rpc_ck_certificate_type_t ();
-extern bool_t xdr_rpc_ck_attribute_type_t ();
-extern bool_t xdr_rpc_ck_flags_t ();
-extern bool_t xdr_rpc_ck_notification_t ();
-extern bool_t xdr_opaque_data ();
-extern bool_t xdr_rpc_ck_version ();
-extern bool_t xdr_rpc_ck_info ();
-extern bool_t xdr_rpc_ck_slot_info ();
-extern bool_t xdr_rpc_ck_token_info ();
-extern bool_t xdr_rpc_ck_mechanism ();
-extern bool_t xdr_rpc_ck_session_info ();
-extern bool_t xdr_rpc_ck_mechanism_info ();
-extern bool_t xdr_rpc_ck_attribute ();
-extern bool_t xdr_rpc_ck_attribute_array ();
-extern bool_t xdr_rpc_ck_date ();
-extern bool_t xdr_ck_rv_c_GetSlotList ();
-extern bool_t xdr_ck_rv_c_GetSlotInfo ();
-extern bool_t xdr_ck_rv_c_GetTokenInfo ();
-extern bool_t xdr_ck_rv_c_GetInfo ();
-extern bool_t xdr_ck_rv_c_WaitForSlotEvent ();
-extern bool_t xdr_ck_rv_c_OpenSession ();
-extern bool_t xdr_ck_rv_c_GetMechanismList ();
-extern bool_t xdr_ck_rv_c_GetSessionInfo ();
-extern bool_t xdr_ck_rv_c_GetMechanismInfo ();
-extern bool_t xdr_ck_rv_c_GenerateRandom ();
-extern bool_t xdr_ck_rv_c_FindObjects ();
-extern bool_t xdr_ck_rv_c_GenerateKey ();
-extern bool_t xdr_ck_rv_c_GenerateKeyPair ();
-extern bool_t xdr_ck_rv_c_CreateObject ();
-extern bool_t xdr_ck_rv_c_CopyObject ();
-extern bool_t xdr_ck_rv_c_GetAttributeValue ();
-extern bool_t xdr_ck_rv_c_GetObjectSize ();
-extern bool_t xdr_ck_rv_c_WrapKey ();
-extern bool_t xdr_ck_rv_c_UnwrapKey ();
-extern bool_t xdr_ck_rv_c_DeriveKey ();
-extern bool_t xdr_ck_rv_c_Digest ();
-extern bool_t xdr_ck_rv_c_DigestFinal ();
-extern bool_t xdr_ck_rv_c_Sign ();
-extern bool_t xdr_ck_rv_c_SignFinal ();
-extern bool_t xdr_ck_rv_c_Encrypt ();
-extern bool_t xdr_ck_rv_c_EncryptUpdate ();
-extern bool_t xdr_ck_rv_c_EncryptFinal ();
-extern bool_t xdr_ck_rv_c_Decrypt ();
-extern bool_t xdr_ck_rv_c_DecryptUpdate ();
-extern bool_t xdr_ck_rv_c_DecryptFinal ();
-extern bool_t xdr_ck_rv_c_SignRecover ();
-extern bool_t xdr_ck_rv_c_VerifyRecover ();
-extern bool_t xdr_ck_rv_c_DigestEncryptUpdate ();
-extern bool_t xdr_ck_rv_c_DecryptDigestUpdate ();
-extern bool_t xdr_ck_rv_c_SignEncryptUpdate ();
-extern bool_t xdr_ck_rv_c_DecryptVerifyUpdate ();
-extern bool_t xdr_ck_rv_c_GetOperationState ();
-extern bool_t xdr_c_getslotlist_3_argument ();
-extern bool_t xdr_c_login_3_argument ();
-extern bool_t xdr_c_opensession_3_argument ();
-extern bool_t xdr_c_getmechanismlist_3_argument ();
-extern bool_t xdr_c_getmechanisminfo_3_argument ();
-extern bool_t xdr_c_initpin_3_argument ();
-extern bool_t xdr_c_setpin_3_argument ();
-extern bool_t xdr_c_seedrandom_3_argument ();
-extern bool_t xdr_c_inittoken_3_argument ();
-extern bool_t xdr_c_generaterandom_3_argument ();
-extern bool_t xdr_c_findobjectsinit_3_argument ();
-extern bool_t xdr_c_findobjects_3_argument ();
-extern bool_t xdr_c_generatekey_3_argument ();
-extern bool_t xdr_c_generatekeypair_3_argument ();
-extern bool_t xdr_c_createobject_3_argument ();
-extern bool_t xdr_c_copyobject_3_argument ();
-extern bool_t xdr_c_destroyobject_3_argument ();
-extern bool_t xdr_c_getattributevalue_3_argument ();
-extern bool_t xdr_c_setattributevalue_3_argument ();
-extern bool_t xdr_c_getobjectsize_3_argument ();
-extern bool_t xdr_c_wrapkey_3_argument ();
-extern bool_t xdr_c_unwrapkey_3_argument ();
-extern bool_t xdr_c_derivekey_3_argument ();
-extern bool_t xdr_c_digestinit_3_argument ();
-extern bool_t xdr_c_digest_3_argument ();
-extern bool_t xdr_c_digestupdate_3_argument ();
-extern bool_t xdr_c_digestkey_3_argument ();
-extern bool_t xdr_c_signinit_3_argument ();
-extern bool_t xdr_c_sign_3_argument ();
-extern bool_t xdr_c_signupdate_3_argument ();
-extern bool_t xdr_c_verifyinit_3_argument ();
-extern bool_t xdr_c_verify_3_argument ();
-extern bool_t xdr_c_verifyupdate_3_argument ();
-extern bool_t xdr_c_verifyfinal_3_argument ();
-extern bool_t xdr_c_encryptinit_3_argument ();
-extern bool_t xdr_c_encrypt_3_argument ();
-extern bool_t xdr_c_encryptupdate_3_argument ();
-extern bool_t xdr_c_decryptinit_3_argument ();
-extern bool_t xdr_c_decrypt_3_argument ();
-extern bool_t xdr_c_decryptupdate_3_argument ();
-extern bool_t xdr_c_signrecoverinit_3_argument ();
-extern bool_t xdr_c_signrecover_3_argument ();
-extern bool_t xdr_c_verifyrecoverinit_3_argument ();
-extern bool_t xdr_c_verifyrecover_3_argument ();
-extern bool_t xdr_c_digestencryptupdate_3_argument ();
-extern bool_t xdr_c_signencryptupdate_3_argument ();
-extern bool_t xdr_c_decryptdigestupdate_3_argument ();
-extern bool_t xdr_c_decryptverifyupdate_3_argument ();
-extern bool_t xdr_c_setoperationstate_3_argument ();
-
-#endif /* K&R C */
+#define P ((rpc_uint)4)
+#define V ((rpc_uint)3)
 
 #ifdef __cplusplus
-}
-#endif
+#define c_SetupArch ((rpc_uint)2)
+extern "C" rpc_ck_rv_t * c_setuparch_3(pkcs11_int , CLIENT *);
+extern "C" rpc_ck_rv_t * c_setuparch_3_svc(pkcs11_int , struct svc_req *);
+#define c_Initialize ((rpc_uint)3)
+extern "C" rpc_ck_rv_t * c_initialize_3(CLIENT *);
+extern "C" rpc_ck_rv_t * c_initialize_3_svc(struct svc_req *);
+#define c_GetSlotList ((rpc_uint)4)
+extern "C" ck_rv_c_GetSlotList * c_getslotlist_3(pkcs11_int , pkcs11_int , CLIENT *);
+extern "C" ck_rv_c_GetSlotList * c_getslotlist_3_svc(pkcs11_int , pkcs11_int , struct svc_req *);
+#define c_GetInfo ((rpc_uint)5)
+extern "C" ck_rv_c_GetInfo * c_getinfo_3(CLIENT *);
+extern "C" ck_rv_c_GetInfo * c_getinfo_3_svc(struct svc_req *);
+#define c_WaitForSlotEvent ((rpc_uint)6)
+extern "C" ck_rv_c_WaitForSlotEvent * c_waitforslotevent_3(rpc_ck_flags_t , CLIENT *);
+extern "C" ck_rv_c_WaitForSlotEvent * c_waitforslotevent_3_svc(rpc_ck_flags_t , struct svc_req *);
+#define c_GetSlotInfo ((rpc_uint)7)
+extern "C" ck_rv_c_GetSlotInfo * c_getslotinfo_3(rpc_ck_slot_id_t , CLIENT *);
+extern "C" ck_rv_c_GetSlotInfo * c_getslotinfo_3_svc(rpc_ck_slot_id_t , struct svc_req *);
+#define c_GetTokenInfo ((rpc_uint)8)
+extern "C" ck_rv_c_GetTokenInfo * c_gettokeninfo_3(rpc_ck_slot_id_t , CLIENT *);
+extern "C" ck_rv_c_GetTokenInfo * c_gettokeninfo_3_svc(rpc_ck_slot_id_t , struct svc_req *);
+#define c_Login ((rpc_uint)9)
+extern "C" rpc_ck_rv_t * c_login_3(rpc_ck_session_handle_t , rpc_ck_user_type_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_login_3_svc(rpc_ck_session_handle_t , rpc_ck_user_type_t , opaque_data , struct svc_req *);
+#define c_Logout ((rpc_uint)10)
+extern "C" rpc_ck_rv_t * c_logout_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_logout_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_OpenSession ((rpc_uint)11)
+extern "C" ck_rv_c_OpenSession * c_opensession_3(rpc_ck_slot_id_t , rpc_ck_flags_t , CLIENT *);
+extern "C" ck_rv_c_OpenSession * c_opensession_3_svc(rpc_ck_slot_id_t , rpc_ck_flags_t , struct svc_req *);
+#define c_CloseSession ((rpc_uint)12)
+extern "C" rpc_ck_rv_t * c_closesession_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_closesession_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_Finalize ((rpc_uint)13)
+extern "C" rpc_ck_rv_t * c_finalize_3(CLIENT *);
+extern "C" rpc_ck_rv_t * c_finalize_3_svc(struct svc_req *);
+#define c_GetMechanismList ((rpc_uint)14)
+extern "C" ck_rv_c_GetMechanismList * c_getmechanismlist_3(rpc_ck_slot_id_t , pkcs11_int , CLIENT *);
+extern "C" ck_rv_c_GetMechanismList * c_getmechanismlist_3_svc(rpc_ck_slot_id_t , pkcs11_int , struct svc_req *);
+#define c_CloseAllSessions ((rpc_uint)15)
+extern "C" rpc_ck_rv_t * c_closeallsessions_3(rpc_ck_slot_id_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_closeallsessions_3_svc(rpc_ck_slot_id_t , struct svc_req *);
+#define c_GetSessionInfo ((rpc_uint)16)
+extern "C" ck_rv_c_GetSessionInfo * c_getsessioninfo_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" ck_rv_c_GetSessionInfo * c_getsessioninfo_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_GetMechanismInfo ((rpc_uint)17)
+extern "C" ck_rv_c_GetMechanismInfo * c_getmechanisminfo_3(rpc_ck_slot_id_t , rpc_ck_mechanism_type_t , CLIENT *);
+extern "C" ck_rv_c_GetMechanismInfo * c_getmechanisminfo_3_svc(rpc_ck_slot_id_t , rpc_ck_mechanism_type_t , struct svc_req *);
+#define c_InitPIN ((rpc_uint)18)
+extern "C" rpc_ck_rv_t * c_initpin_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_initpin_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SetPIN ((rpc_uint)19)
+extern "C" rpc_ck_rv_t * c_setpin_3(rpc_ck_session_handle_t , opaque_data , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_setpin_3_svc(rpc_ck_session_handle_t , opaque_data , opaque_data , struct svc_req *);
+#define c_SeedRandom ((rpc_uint)20)
+extern "C" rpc_ck_rv_t * c_seedrandom_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_seedrandom_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_InitToken ((rpc_uint)21)
+extern "C" rpc_ck_rv_t * c_inittoken_3(rpc_ck_slot_id_t , opaque_data , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_inittoken_3_svc(rpc_ck_slot_id_t , opaque_data , opaque_data , struct svc_req *);
+#define c_GenerateRandom ((rpc_uint)22)
+extern "C" ck_rv_c_GenerateRandom * c_generaterandom_3(rpc_ck_session_handle_t , pkcs11_int , CLIENT *);
+extern "C" ck_rv_c_GenerateRandom * c_generaterandom_3_svc(rpc_ck_session_handle_t , pkcs11_int , struct svc_req *);
+#define c_FindObjectsInit ((rpc_uint)23)
+extern "C" rpc_ck_rv_t * c_findobjectsinit_3(rpc_ck_session_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern "C" rpc_ck_rv_t * c_findobjectsinit_3_svc(rpc_ck_session_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_FindObjects ((rpc_uint)24)
+extern "C" ck_rv_c_FindObjects * c_findobjects_3(rpc_ck_session_handle_t , pkcs11_int , CLIENT *);
+extern "C" ck_rv_c_FindObjects * c_findobjects_3_svc(rpc_ck_session_handle_t , pkcs11_int , struct svc_req *);
+#define c_FindObjectsFinal ((rpc_uint)25)
+extern "C" rpc_ck_rv_t * c_findobjectsfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_findobjectsfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_GenerateKey ((rpc_uint)26)
+extern "C" ck_rv_c_GenerateKey * c_generatekey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_GenerateKey * c_generatekey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , struct svc_req *);
+#define c_GenerateKeyPair ((rpc_uint)27)
+extern "C" ck_rv_c_GenerateKeyPair * c_generatekeypair_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_GenerateKeyPair * c_generatekeypair_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , rpc_ck_attribute_array , struct svc_req *);
+#define c_CreateObject ((rpc_uint)28)
+extern "C" ck_rv_c_CreateObject * c_createobject_3(rpc_ck_session_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_CreateObject * c_createobject_3_svc(rpc_ck_session_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_CopyObject ((rpc_uint)29)
+extern "C" ck_rv_c_CopyObject * c_copyobject_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_CopyObject * c_copyobject_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_DestroyObject ((rpc_uint)30)
+extern "C" rpc_ck_rv_t * c_destroyobject_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_destroyobject_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_GetAttributeValue ((rpc_uint)31)
+extern "C" ck_rv_c_GetAttributeValue * c_getattributevalue_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_GetAttributeValue * c_getattributevalue_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_SetAttributeValue ((rpc_uint)32)
+extern "C" rpc_ck_rv_t * c_setattributevalue_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern "C" rpc_ck_rv_t * c_setattributevalue_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_GetObjectSize ((rpc_uint)33)
+extern "C" ck_rv_c_GetObjectSize * c_getobjectsize_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern "C" ck_rv_c_GetObjectSize * c_getobjectsize_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_WrapKey ((rpc_uint)34)
+extern "C" ck_rv_c_WrapKey * c_wrapkey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern "C" ck_rv_c_WrapKey * c_wrapkey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_UnwrapKey ((rpc_uint)35)
+extern "C" ck_rv_c_UnwrapKey * c_unwrapkey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , opaque_data , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_UnwrapKey * c_unwrapkey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , opaque_data , rpc_ck_attribute_array , struct svc_req *);
+#define c_DeriveKey ((rpc_uint)36)
+extern "C" ck_rv_c_DeriveKey * c_derivekey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern "C" ck_rv_c_DeriveKey * c_derivekey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_DigestInit ((rpc_uint)37)
+extern "C" rpc_ck_rv_t * c_digestinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , CLIENT *);
+extern "C" rpc_ck_rv_t * c_digestinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , struct svc_req *);
+#define c_Digest ((rpc_uint)38)
+extern "C" ck_rv_c_Digest * c_digest_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_Digest * c_digest_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DigestUpdate ((rpc_uint)39)
+extern "C" rpc_ck_rv_t * c_digestupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_digestupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DigestFinal ((rpc_uint)40)
+extern "C" ck_rv_c_DigestFinal * c_digestfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" ck_rv_c_DigestFinal * c_digestfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_DigestKey ((rpc_uint)41)
+extern "C" rpc_ck_rv_t * c_digestkey_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_digestkey_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_SignInit ((rpc_uint)42)
+extern "C" rpc_ck_rv_t * c_signinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_signinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Sign ((rpc_uint)43)
+extern "C" ck_rv_c_Sign * c_sign_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_Sign * c_sign_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SignUpdate ((rpc_uint)44)
+extern "C" rpc_ck_rv_t * c_signupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_signupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SignFinal ((rpc_uint)45)
+extern "C" ck_rv_c_SignFinal * c_signfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" ck_rv_c_SignFinal * c_signfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_VerifyInit ((rpc_uint)46)
+extern "C" rpc_ck_rv_t * c_verifyinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_verifyinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Verify ((rpc_uint)47)
+extern "C" rpc_ck_rv_t * c_verify_3(rpc_ck_session_handle_t , opaque_data , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_verify_3_svc(rpc_ck_session_handle_t , opaque_data , opaque_data , struct svc_req *);
+#define c_VerifyUpdate ((rpc_uint)48)
+extern "C" rpc_ck_rv_t * c_verifyupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_verifyupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_VerifyFinal ((rpc_uint)49)
+extern "C" rpc_ck_rv_t * c_verifyfinal_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_verifyfinal_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_EncryptInit ((rpc_uint)50)
+extern "C" rpc_ck_rv_t * c_encryptinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_encryptinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Encrypt ((rpc_uint)51)
+extern "C" ck_rv_c_Encrypt * c_encrypt_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_Encrypt * c_encrypt_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_EncryptUpdate ((rpc_uint)52)
+extern "C" ck_rv_c_EncryptUpdate * c_encryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_EncryptUpdate * c_encryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_EncryptFinal ((rpc_uint)53)
+extern "C" ck_rv_c_EncryptFinal * c_encryptfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" ck_rv_c_EncryptFinal * c_encryptfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_DecryptInit ((rpc_uint)54)
+extern "C" rpc_ck_rv_t * c_decryptinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_decryptinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Decrypt ((rpc_uint)55)
+extern "C" ck_rv_c_Decrypt * c_decrypt_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_Decrypt * c_decrypt_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptUpdate ((rpc_uint)56)
+extern "C" ck_rv_c_DecryptUpdate * c_decryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_DecryptUpdate * c_decryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptFinal ((rpc_uint)57)
+extern "C" ck_rv_c_DecryptFinal * c_decryptfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" ck_rv_c_DecryptFinal * c_decryptfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_SignRecoverInit ((rpc_uint)58)
+extern "C" rpc_ck_rv_t * c_signrecoverinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_signrecoverinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_SignRecover ((rpc_uint)59)
+extern "C" ck_rv_c_SignRecover * c_signrecover_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_SignRecover * c_signrecover_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_VerifyRecoverInit ((rpc_uint)60)
+extern "C" rpc_ck_rv_t * c_verifyrecoverinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_verifyrecoverinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_VerifyRecover ((rpc_uint)61)
+extern "C" ck_rv_c_VerifyRecover * c_verifyrecover_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_VerifyRecover * c_verifyrecover_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DigestEncryptUpdate ((rpc_uint)62)
+extern "C" ck_rv_c_DigestEncryptUpdate * c_digestencryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_DigestEncryptUpdate * c_digestencryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SignEncryptUpdate ((rpc_uint)63)
+extern "C" ck_rv_c_SignEncryptUpdate * c_signencryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_SignEncryptUpdate * c_signencryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptDigestUpdate ((rpc_uint)64)
+extern "C" ck_rv_c_DecryptDigestUpdate * c_decryptdigestupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_DecryptDigestUpdate * c_decryptdigestupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptVerifyUpdate ((rpc_uint)65)
+extern "C" ck_rv_c_DecryptVerifyUpdate * c_decryptverifyupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern "C" ck_rv_c_DecryptVerifyUpdate * c_decryptverifyupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_GetOperationState ((rpc_uint)66)
+extern "C" ck_rv_c_GetOperationState * c_getoperationstate_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" ck_rv_c_GetOperationState * c_getoperationstate_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_SetOperationState ((rpc_uint)67)
+extern "C" rpc_ck_rv_t * c_setoperationstate_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_object_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_setoperationstate_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_object_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_GetFunctionStatus ((rpc_uint)68)
+extern "C" rpc_ck_rv_t * c_getfunctionstatus_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_getfunctionstatus_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_CancelFunction ((rpc_uint)69)
+extern "C" rpc_ck_rv_t * c_cancelfunction_3(rpc_ck_session_handle_t , CLIENT *);
+extern "C" rpc_ck_rv_t * c_cancelfunction_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_LoadModule ((rpc_uint)70)
+extern "C" rpc_ck_rv_t * c_loadmodule_3(opaque_data , CLIENT *);
+extern "C" rpc_ck_rv_t * c_loadmodule_3_svc(opaque_data , struct svc_req *);
+
+#elif __STDC__
+#define c_SetupArch ((rpc_uint)2)
+extern  rpc_ck_rv_t * c_setuparch_3(pkcs11_int , CLIENT *);
+extern  rpc_ck_rv_t * c_setuparch_3_svc(pkcs11_int , struct svc_req *);
+#define c_Initialize ((rpc_uint)3)
+extern  rpc_ck_rv_t * c_initialize_3(CLIENT *);
+extern  rpc_ck_rv_t * c_initialize_3_svc(struct svc_req *);
+#define c_GetSlotList ((rpc_uint)4)
+extern  ck_rv_c_GetSlotList * c_getslotlist_3(pkcs11_int , pkcs11_int , CLIENT *);
+extern  ck_rv_c_GetSlotList * c_getslotlist_3_svc(pkcs11_int , pkcs11_int , struct svc_req *);
+#define c_GetInfo ((rpc_uint)5)
+extern  ck_rv_c_GetInfo * c_getinfo_3(CLIENT *);
+extern  ck_rv_c_GetInfo * c_getinfo_3_svc(struct svc_req *);
+#define c_WaitForSlotEvent ((rpc_uint)6)
+extern  ck_rv_c_WaitForSlotEvent * c_waitforslotevent_3(rpc_ck_flags_t , CLIENT *);
+extern  ck_rv_c_WaitForSlotEvent * c_waitforslotevent_3_svc(rpc_ck_flags_t , struct svc_req *);
+#define c_GetSlotInfo ((rpc_uint)7)
+extern  ck_rv_c_GetSlotInfo * c_getslotinfo_3(rpc_ck_slot_id_t , CLIENT *);
+extern  ck_rv_c_GetSlotInfo * c_getslotinfo_3_svc(rpc_ck_slot_id_t , struct svc_req *);
+#define c_GetTokenInfo ((rpc_uint)8)
+extern  ck_rv_c_GetTokenInfo * c_gettokeninfo_3(rpc_ck_slot_id_t , CLIENT *);
+extern  ck_rv_c_GetTokenInfo * c_gettokeninfo_3_svc(rpc_ck_slot_id_t , struct svc_req *);
+#define c_Login ((rpc_uint)9)
+extern  rpc_ck_rv_t * c_login_3(rpc_ck_session_handle_t , rpc_ck_user_type_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_login_3_svc(rpc_ck_session_handle_t , rpc_ck_user_type_t , opaque_data , struct svc_req *);
+#define c_Logout ((rpc_uint)10)
+extern  rpc_ck_rv_t * c_logout_3(rpc_ck_session_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_logout_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_OpenSession ((rpc_uint)11)
+extern  ck_rv_c_OpenSession * c_opensession_3(rpc_ck_slot_id_t , rpc_ck_flags_t , CLIENT *);
+extern  ck_rv_c_OpenSession * c_opensession_3_svc(rpc_ck_slot_id_t , rpc_ck_flags_t , struct svc_req *);
+#define c_CloseSession ((rpc_uint)12)
+extern  rpc_ck_rv_t * c_closesession_3(rpc_ck_session_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_closesession_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_Finalize ((rpc_uint)13)
+extern  rpc_ck_rv_t * c_finalize_3(CLIENT *);
+extern  rpc_ck_rv_t * c_finalize_3_svc(struct svc_req *);
+#define c_GetMechanismList ((rpc_uint)14)
+extern  ck_rv_c_GetMechanismList * c_getmechanismlist_3(rpc_ck_slot_id_t , pkcs11_int , CLIENT *);
+extern  ck_rv_c_GetMechanismList * c_getmechanismlist_3_svc(rpc_ck_slot_id_t , pkcs11_int , struct svc_req *);
+#define c_CloseAllSessions ((rpc_uint)15)
+extern  rpc_ck_rv_t * c_closeallsessions_3(rpc_ck_slot_id_t , CLIENT *);
+extern  rpc_ck_rv_t * c_closeallsessions_3_svc(rpc_ck_slot_id_t , struct svc_req *);
+#define c_GetSessionInfo ((rpc_uint)16)
+extern  ck_rv_c_GetSessionInfo * c_getsessioninfo_3(rpc_ck_session_handle_t , CLIENT *);
+extern  ck_rv_c_GetSessionInfo * c_getsessioninfo_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_GetMechanismInfo ((rpc_uint)17)
+extern  ck_rv_c_GetMechanismInfo * c_getmechanisminfo_3(rpc_ck_slot_id_t , rpc_ck_mechanism_type_t , CLIENT *);
+extern  ck_rv_c_GetMechanismInfo * c_getmechanisminfo_3_svc(rpc_ck_slot_id_t , rpc_ck_mechanism_type_t , struct svc_req *);
+#define c_InitPIN ((rpc_uint)18)
+extern  rpc_ck_rv_t * c_initpin_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_initpin_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SetPIN ((rpc_uint)19)
+extern  rpc_ck_rv_t * c_setpin_3(rpc_ck_session_handle_t , opaque_data , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_setpin_3_svc(rpc_ck_session_handle_t , opaque_data , opaque_data , struct svc_req *);
+#define c_SeedRandom ((rpc_uint)20)
+extern  rpc_ck_rv_t * c_seedrandom_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_seedrandom_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_InitToken ((rpc_uint)21)
+extern  rpc_ck_rv_t * c_inittoken_3(rpc_ck_slot_id_t , opaque_data , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_inittoken_3_svc(rpc_ck_slot_id_t , opaque_data , opaque_data , struct svc_req *);
+#define c_GenerateRandom ((rpc_uint)22)
+extern  ck_rv_c_GenerateRandom * c_generaterandom_3(rpc_ck_session_handle_t , pkcs11_int , CLIENT *);
+extern  ck_rv_c_GenerateRandom * c_generaterandom_3_svc(rpc_ck_session_handle_t , pkcs11_int , struct svc_req *);
+#define c_FindObjectsInit ((rpc_uint)23)
+extern  rpc_ck_rv_t * c_findobjectsinit_3(rpc_ck_session_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern  rpc_ck_rv_t * c_findobjectsinit_3_svc(rpc_ck_session_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_FindObjects ((rpc_uint)24)
+extern  ck_rv_c_FindObjects * c_findobjects_3(rpc_ck_session_handle_t , pkcs11_int , CLIENT *);
+extern  ck_rv_c_FindObjects * c_findobjects_3_svc(rpc_ck_session_handle_t , pkcs11_int , struct svc_req *);
+#define c_FindObjectsFinal ((rpc_uint)25)
+extern  rpc_ck_rv_t * c_findobjectsfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_findobjectsfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_GenerateKey ((rpc_uint)26)
+extern  ck_rv_c_GenerateKey * c_generatekey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_GenerateKey * c_generatekey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , struct svc_req *);
+#define c_GenerateKeyPair ((rpc_uint)27)
+extern  ck_rv_c_GenerateKeyPair * c_generatekeypair_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_GenerateKeyPair * c_generatekeypair_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_attribute_array , rpc_ck_attribute_array , struct svc_req *);
+#define c_CreateObject ((rpc_uint)28)
+extern  ck_rv_c_CreateObject * c_createobject_3(rpc_ck_session_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_CreateObject * c_createobject_3_svc(rpc_ck_session_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_CopyObject ((rpc_uint)29)
+extern  ck_rv_c_CopyObject * c_copyobject_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_CopyObject * c_copyobject_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_DestroyObject ((rpc_uint)30)
+extern  rpc_ck_rv_t * c_destroyobject_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_destroyobject_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_GetAttributeValue ((rpc_uint)31)
+extern  ck_rv_c_GetAttributeValue * c_getattributevalue_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_GetAttributeValue * c_getattributevalue_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_SetAttributeValue ((rpc_uint)32)
+extern  rpc_ck_rv_t * c_setattributevalue_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern  rpc_ck_rv_t * c_setattributevalue_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_GetObjectSize ((rpc_uint)33)
+extern  ck_rv_c_GetObjectSize * c_getobjectsize_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern  ck_rv_c_GetObjectSize * c_getobjectsize_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_WrapKey ((rpc_uint)34)
+extern  ck_rv_c_WrapKey * c_wrapkey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern  ck_rv_c_WrapKey * c_wrapkey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_UnwrapKey ((rpc_uint)35)
+extern  ck_rv_c_UnwrapKey * c_unwrapkey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , opaque_data , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_UnwrapKey * c_unwrapkey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , opaque_data , rpc_ck_attribute_array , struct svc_req *);
+#define c_DeriveKey ((rpc_uint)36)
+extern  ck_rv_c_DeriveKey * c_derivekey_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_attribute_array , CLIENT *);
+extern  ck_rv_c_DeriveKey * c_derivekey_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , rpc_ck_attribute_array , struct svc_req *);
+#define c_DigestInit ((rpc_uint)37)
+extern  rpc_ck_rv_t * c_digestinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , CLIENT *);
+extern  rpc_ck_rv_t * c_digestinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , struct svc_req *);
+#define c_Digest ((rpc_uint)38)
+extern  ck_rv_c_Digest * c_digest_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_Digest * c_digest_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DigestUpdate ((rpc_uint)39)
+extern  rpc_ck_rv_t * c_digestupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_digestupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DigestFinal ((rpc_uint)40)
+extern  ck_rv_c_DigestFinal * c_digestfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern  ck_rv_c_DigestFinal * c_digestfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_DigestKey ((rpc_uint)41)
+extern  rpc_ck_rv_t * c_digestkey_3(rpc_ck_session_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_digestkey_3_svc(rpc_ck_session_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_SignInit ((rpc_uint)42)
+extern  rpc_ck_rv_t * c_signinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_signinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Sign ((rpc_uint)43)
+extern  ck_rv_c_Sign * c_sign_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_Sign * c_sign_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SignUpdate ((rpc_uint)44)
+extern  rpc_ck_rv_t * c_signupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_signupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SignFinal ((rpc_uint)45)
+extern  ck_rv_c_SignFinal * c_signfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern  ck_rv_c_SignFinal * c_signfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_VerifyInit ((rpc_uint)46)
+extern  rpc_ck_rv_t * c_verifyinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_verifyinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Verify ((rpc_uint)47)
+extern  rpc_ck_rv_t * c_verify_3(rpc_ck_session_handle_t , opaque_data , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_verify_3_svc(rpc_ck_session_handle_t , opaque_data , opaque_data , struct svc_req *);
+#define c_VerifyUpdate ((rpc_uint)48)
+extern  rpc_ck_rv_t * c_verifyupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_verifyupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_VerifyFinal ((rpc_uint)49)
+extern  rpc_ck_rv_t * c_verifyfinal_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_verifyfinal_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_EncryptInit ((rpc_uint)50)
+extern  rpc_ck_rv_t * c_encryptinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_encryptinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Encrypt ((rpc_uint)51)
+extern  ck_rv_c_Encrypt * c_encrypt_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_Encrypt * c_encrypt_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_EncryptUpdate ((rpc_uint)52)
+extern  ck_rv_c_EncryptUpdate * c_encryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_EncryptUpdate * c_encryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_EncryptFinal ((rpc_uint)53)
+extern  ck_rv_c_EncryptFinal * c_encryptfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern  ck_rv_c_EncryptFinal * c_encryptfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_DecryptInit ((rpc_uint)54)
+extern  rpc_ck_rv_t * c_decryptinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_decryptinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_Decrypt ((rpc_uint)55)
+extern  ck_rv_c_Decrypt * c_decrypt_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_Decrypt * c_decrypt_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptUpdate ((rpc_uint)56)
+extern  ck_rv_c_DecryptUpdate * c_decryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_DecryptUpdate * c_decryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptFinal ((rpc_uint)57)
+extern  ck_rv_c_DecryptFinal * c_decryptfinal_3(rpc_ck_session_handle_t , CLIENT *);
+extern  ck_rv_c_DecryptFinal * c_decryptfinal_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_SignRecoverInit ((rpc_uint)58)
+extern  rpc_ck_rv_t * c_signrecoverinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_signrecoverinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_SignRecover ((rpc_uint)59)
+extern  ck_rv_c_SignRecover * c_signrecover_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_SignRecover * c_signrecover_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_VerifyRecoverInit ((rpc_uint)60)
+extern  rpc_ck_rv_t * c_verifyrecoverinit_3(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_verifyrecoverinit_3_svc(rpc_ck_session_handle_t , rpc_ck_mechanism , rpc_ck_object_handle_t , struct svc_req *);
+#define c_VerifyRecover ((rpc_uint)61)
+extern  ck_rv_c_VerifyRecover * c_verifyrecover_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_VerifyRecover * c_verifyrecover_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DigestEncryptUpdate ((rpc_uint)62)
+extern  ck_rv_c_DigestEncryptUpdate * c_digestencryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_DigestEncryptUpdate * c_digestencryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_SignEncryptUpdate ((rpc_uint)63)
+extern  ck_rv_c_SignEncryptUpdate * c_signencryptupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_SignEncryptUpdate * c_signencryptupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptDigestUpdate ((rpc_uint)64)
+extern  ck_rv_c_DecryptDigestUpdate * c_decryptdigestupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_DecryptDigestUpdate * c_decryptdigestupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_DecryptVerifyUpdate ((rpc_uint)65)
+extern  ck_rv_c_DecryptVerifyUpdate * c_decryptverifyupdate_3(rpc_ck_session_handle_t , opaque_data , CLIENT *);
+extern  ck_rv_c_DecryptVerifyUpdate * c_decryptverifyupdate_3_svc(rpc_ck_session_handle_t , opaque_data , struct svc_req *);
+#define c_GetOperationState ((rpc_uint)66)
+extern  ck_rv_c_GetOperationState * c_getoperationstate_3(rpc_ck_session_handle_t , CLIENT *);
+extern  ck_rv_c_GetOperationState * c_getoperationstate_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_SetOperationState ((rpc_uint)67)
+extern  rpc_ck_rv_t * c_setoperationstate_3(rpc_ck_session_handle_t , opaque_data , rpc_ck_object_handle_t , rpc_ck_object_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_setoperationstate_3_svc(rpc_ck_session_handle_t , opaque_data , rpc_ck_object_handle_t , rpc_ck_object_handle_t , struct svc_req *);
+#define c_GetFunctionStatus ((rpc_uint)68)
+extern  rpc_ck_rv_t * c_getfunctionstatus_3(rpc_ck_session_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_getfunctionstatus_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_CancelFunction ((rpc_uint)69)
+extern  rpc_ck_rv_t * c_cancelfunction_3(rpc_ck_session_handle_t , CLIENT *);
+extern  rpc_ck_rv_t * c_cancelfunction_3_svc(rpc_ck_session_handle_t , struct svc_req *);
+#define c_LoadModule ((rpc_uint)70)
+extern  rpc_ck_rv_t * c_loadmodule_3(opaque_data , CLIENT *);
+extern  rpc_ck_rv_t * c_loadmodule_3_svc(opaque_data , struct svc_req *);
+
+#else /* Old Style C */
+#define c_SetupArch ((rpc_uint)2)
+extern  rpc_ck_rv_t * c_setuparch_3();
+extern  rpc_ck_rv_t * c_setuparch_3_svc();
+#define c_Initialize ((rpc_uint)3)
+extern  rpc_ck_rv_t * c_initialize_3();
+extern  rpc_ck_rv_t * c_initialize_3_svc();
+#define c_GetSlotList ((rpc_uint)4)
+extern  ck_rv_c_GetSlotList * c_getslotlist_3();
+extern  ck_rv_c_GetSlotList * c_getslotlist_3_svc();
+#define c_GetInfo ((rpc_uint)5)
+extern  ck_rv_c_GetInfo * c_getinfo_3();
+extern  ck_rv_c_GetInfo * c_getinfo_3_svc();
+#define c_WaitForSlotEvent ((rpc_uint)6)
+extern  ck_rv_c_WaitForSlotEvent * c_waitforslotevent_3();
+extern  ck_rv_c_WaitForSlotEvent * c_waitforslotevent_3_svc();
+#define c_GetSlotInfo ((rpc_uint)7)
+extern  ck_rv_c_GetSlotInfo * c_getslotinfo_3();
+extern  ck_rv_c_GetSlotInfo * c_getslotinfo_3_svc();
+#define c_GetTokenInfo ((rpc_uint)8)
+extern  ck_rv_c_GetTokenInfo * c_gettokeninfo_3();
+extern  ck_rv_c_GetTokenInfo * c_gettokeninfo_3_svc();
+#define c_Login ((rpc_uint)9)
+extern  rpc_ck_rv_t * c_login_3();
+extern  rpc_ck_rv_t * c_login_3_svc();
+#define c_Logout ((rpc_uint)10)
+extern  rpc_ck_rv_t * c_logout_3();
+extern  rpc_ck_rv_t * c_logout_3_svc();
+#define c_OpenSession ((rpc_uint)11)
+extern  ck_rv_c_OpenSession * c_opensession_3();
+extern  ck_rv_c_OpenSession * c_opensession_3_svc();
+#define c_CloseSession ((rpc_uint)12)
+extern  rpc_ck_rv_t * c_closesession_3();
+extern  rpc_ck_rv_t * c_closesession_3_svc();
+#define c_Finalize ((rpc_uint)13)
+extern  rpc_ck_rv_t * c_finalize_3();
+extern  rpc_ck_rv_t * c_finalize_3_svc();
+#define c_GetMechanismList ((rpc_uint)14)
+extern  ck_rv_c_GetMechanismList * c_getmechanismlist_3();
+extern  ck_rv_c_GetMechanismList * c_getmechanismlist_3_svc();
+#define c_CloseAllSessions ((rpc_uint)15)
+extern  rpc_ck_rv_t * c_closeallsessions_3();
+extern  rpc_ck_rv_t * c_closeallsessions_3_svc();
+#define c_GetSessionInfo ((rpc_uint)16)
+extern  ck_rv_c_GetSessionInfo * c_getsessioninfo_3();
+extern  ck_rv_c_GetSessionInfo * c_getsessioninfo_3_svc();
+#define c_GetMechanismInfo ((rpc_uint)17)
+extern  ck_rv_c_GetMechanismInfo * c_getmechanisminfo_3();
+extern  ck_rv_c_GetMechanismInfo * c_getmechanisminfo_3_svc();
+#define c_InitPIN ((rpc_uint)18)
+extern  rpc_ck_rv_t * c_initpin_3();
+extern  rpc_ck_rv_t * c_initpin_3_svc();
+#define c_SetPIN ((rpc_uint)19)
+extern  rpc_ck_rv_t * c_setpin_3();
+extern  rpc_ck_rv_t * c_setpin_3_svc();
+#define c_SeedRandom ((rpc_uint)20)
+extern  rpc_ck_rv_t * c_seedrandom_3();
+extern  rpc_ck_rv_t * c_seedrandom_3_svc();
+#define c_InitToken ((rpc_uint)21)
+extern  rpc_ck_rv_t * c_inittoken_3();
+extern  rpc_ck_rv_t * c_inittoken_3_svc();
+#define c_GenerateRandom ((rpc_uint)22)
+extern  ck_rv_c_GenerateRandom * c_generaterandom_3();
+extern  ck_rv_c_GenerateRandom * c_generaterandom_3_svc();
+#define c_FindObjectsInit ((rpc_uint)23)
+extern  rpc_ck_rv_t * c_findobjectsinit_3();
+extern  rpc_ck_rv_t * c_findobjectsinit_3_svc();
+#define c_FindObjects ((rpc_uint)24)
+extern  ck_rv_c_FindObjects * c_findobjects_3();
+extern  ck_rv_c_FindObjects * c_findobjects_3_svc();
+#define c_FindObjectsFinal ((rpc_uint)25)
+extern  rpc_ck_rv_t * c_findobjectsfinal_3();
+extern  rpc_ck_rv_t * c_findobjectsfinal_3_svc();
+#define c_GenerateKey ((rpc_uint)26)
+extern  ck_rv_c_GenerateKey * c_generatekey_3();
+extern  ck_rv_c_GenerateKey * c_generatekey_3_svc();
+#define c_GenerateKeyPair ((rpc_uint)27)
+extern  ck_rv_c_GenerateKeyPair * c_generatekeypair_3();
+extern  ck_rv_c_GenerateKeyPair * c_generatekeypair_3_svc();
+#define c_CreateObject ((rpc_uint)28)
+extern  ck_rv_c_CreateObject * c_createobject_3();
+extern  ck_rv_c_CreateObject * c_createobject_3_svc();
+#define c_CopyObject ((rpc_uint)29)
+extern  ck_rv_c_CopyObject * c_copyobject_3();
+extern  ck_rv_c_CopyObject * c_copyobject_3_svc();
+#define c_DestroyObject ((rpc_uint)30)
+extern  rpc_ck_rv_t * c_destroyobject_3();
+extern  rpc_ck_rv_t * c_destroyobject_3_svc();
+#define c_GetAttributeValue ((rpc_uint)31)
+extern  ck_rv_c_GetAttributeValue * c_getattributevalue_3();
+extern  ck_rv_c_GetAttributeValue * c_getattributevalue_3_svc();
+#define c_SetAttributeValue ((rpc_uint)32)
+extern  rpc_ck_rv_t * c_setattributevalue_3();
+extern  rpc_ck_rv_t * c_setattributevalue_3_svc();
+#define c_GetObjectSize ((rpc_uint)33)
+extern  ck_rv_c_GetObjectSize * c_getobjectsize_3();
+extern  ck_rv_c_GetObjectSize * c_getobjectsize_3_svc();
+#define c_WrapKey ((rpc_uint)34)
+extern  ck_rv_c_WrapKey * c_wrapkey_3();
+extern  ck_rv_c_WrapKey * c_wrapkey_3_svc();
+#define c_UnwrapKey ((rpc_uint)35)
+extern  ck_rv_c_UnwrapKey * c_unwrapkey_3();
+extern  ck_rv_c_UnwrapKey * c_unwrapkey_3_svc();
+#define c_DeriveKey ((rpc_uint)36)
+extern  ck_rv_c_DeriveKey * c_derivekey_3();
+extern  ck_rv_c_DeriveKey * c_derivekey_3_svc();
+#define c_DigestInit ((rpc_uint)37)
+extern  rpc_ck_rv_t * c_digestinit_3();
+extern  rpc_ck_rv_t * c_digestinit_3_svc();
+#define c_Digest ((rpc_uint)38)
+extern  ck_rv_c_Digest * c_digest_3();
+extern  ck_rv_c_Digest * c_digest_3_svc();
+#define c_DigestUpdate ((rpc_uint)39)
+extern  rpc_ck_rv_t * c_digestupdate_3();
+extern  rpc_ck_rv_t * c_digestupdate_3_svc();
+#define c_DigestFinal ((rpc_uint)40)
+extern  ck_rv_c_DigestFinal * c_digestfinal_3();
+extern  ck_rv_c_DigestFinal * c_digestfinal_3_svc();
+#define c_DigestKey ((rpc_uint)41)
+extern  rpc_ck_rv_t * c_digestkey_3();
+extern  rpc_ck_rv_t * c_digestkey_3_svc();
+#define c_SignInit ((rpc_uint)42)
+extern  rpc_ck_rv_t * c_signinit_3();
+extern  rpc_ck_rv_t * c_signinit_3_svc();
+#define c_Sign ((rpc_uint)43)
+extern  ck_rv_c_Sign * c_sign_3();
+extern  ck_rv_c_Sign * c_sign_3_svc();
+#define c_SignUpdate ((rpc_uint)44)
+extern  rpc_ck_rv_t * c_signupdate_3();
+extern  rpc_ck_rv_t * c_signupdate_3_svc();
+#define c_SignFinal ((rpc_uint)45)
+extern  ck_rv_c_SignFinal * c_signfinal_3();
+extern  ck_rv_c_SignFinal * c_signfinal_3_svc();
+#define c_VerifyInit ((rpc_uint)46)
+extern  rpc_ck_rv_t * c_verifyinit_3();
+extern  rpc_ck_rv_t * c_verifyinit_3_svc();
+#define c_Verify ((rpc_uint)47)
+extern  rpc_ck_rv_t * c_verify_3();
+extern  rpc_ck_rv_t * c_verify_3_svc();
+#define c_VerifyUpdate ((rpc_uint)48)
+extern  rpc_ck_rv_t * c_verifyupdate_3();
+extern  rpc_ck_rv_t * c_verifyupdate_3_svc();
+#define c_VerifyFinal ((rpc_uint)49)
+extern  rpc_ck_rv_t * c_verifyfinal_3();
+extern  rpc_ck_rv_t * c_verifyfinal_3_svc();
+#define c_EncryptInit ((rpc_uint)50)
+extern  rpc_ck_rv_t * c_encryptinit_3();
+extern  rpc_ck_rv_t * c_encryptinit_3_svc();
+#define c_Encrypt ((rpc_uint)51)
+extern  ck_rv_c_Encrypt * c_encrypt_3();
+extern  ck_rv_c_Encrypt * c_encrypt_3_svc();
+#define c_EncryptUpdate ((rpc_uint)52)
+extern  ck_rv_c_EncryptUpdate * c_encryptupdate_3();
+extern  ck_rv_c_EncryptUpdate * c_encryptupdate_3_svc();
+#define c_EncryptFinal ((rpc_uint)53)
+extern  ck_rv_c_EncryptFinal * c_encryptfinal_3();
+extern  ck_rv_c_EncryptFinal * c_encryptfinal_3_svc();
+#define c_DecryptInit ((rpc_uint)54)
+extern  rpc_ck_rv_t * c_decryptinit_3();
+extern  rpc_ck_rv_t * c_decryptinit_3_svc();
+#define c_Decrypt ((rpc_uint)55)
+extern  ck_rv_c_Decrypt * c_decrypt_3();
+extern  ck_rv_c_Decrypt * c_decrypt_3_svc();
+#define c_DecryptUpdate ((rpc_uint)56)
+extern  ck_rv_c_DecryptUpdate * c_decryptupdate_3();
+extern  ck_rv_c_DecryptUpdate * c_decryptupdate_3_svc();
+#define c_DecryptFinal ((rpc_uint)57)
+extern  ck_rv_c_DecryptFinal * c_decryptfinal_3();
+extern  ck_rv_c_DecryptFinal * c_decryptfinal_3_svc();
+#define c_SignRecoverInit ((rpc_uint)58)
+extern  rpc_ck_rv_t * c_signrecoverinit_3();
+extern  rpc_ck_rv_t * c_signrecoverinit_3_svc();
+#define c_SignRecover ((rpc_uint)59)
+extern  ck_rv_c_SignRecover * c_signrecover_3();
+extern  ck_rv_c_SignRecover * c_signrecover_3_svc();
+#define c_VerifyRecoverInit ((rpc_uint)60)
+extern  rpc_ck_rv_t * c_verifyrecoverinit_3();
+extern  rpc_ck_rv_t * c_verifyrecoverinit_3_svc();
+#define c_VerifyRecover ((rpc_uint)61)
+extern  ck_rv_c_VerifyRecover * c_verifyrecover_3();
+extern  ck_rv_c_VerifyRecover * c_verifyrecover_3_svc();
+#define c_DigestEncryptUpdate ((rpc_uint)62)
+extern  ck_rv_c_DigestEncryptUpdate * c_digestencryptupdate_3();
+extern  ck_rv_c_DigestEncryptUpdate * c_digestencryptupdate_3_svc();
+#define c_SignEncryptUpdate ((rpc_uint)63)
+extern  ck_rv_c_SignEncryptUpdate * c_signencryptupdate_3();
+extern  ck_rv_c_SignEncryptUpdate * c_signencryptupdate_3_svc();
+#define c_DecryptDigestUpdate ((rpc_uint)64)
+extern  ck_rv_c_DecryptDigestUpdate * c_decryptdigestupdate_3();
+extern  ck_rv_c_DecryptDigestUpdate * c_decryptdigestupdate_3_svc();
+#define c_DecryptVerifyUpdate ((rpc_uint)65)
+extern  ck_rv_c_DecryptVerifyUpdate * c_decryptverifyupdate_3();
+extern  ck_rv_c_DecryptVerifyUpdate * c_decryptverifyupdate_3_svc();
+#define c_GetOperationState ((rpc_uint)66)
+extern  ck_rv_c_GetOperationState * c_getoperationstate_3();
+extern  ck_rv_c_GetOperationState * c_getoperationstate_3_svc();
+#define c_SetOperationState ((rpc_uint)67)
+extern  rpc_ck_rv_t * c_setoperationstate_3();
+extern  rpc_ck_rv_t * c_setoperationstate_3_svc();
+#define c_GetFunctionStatus ((rpc_uint)68)
+extern  rpc_ck_rv_t * c_getfunctionstatus_3();
+extern  rpc_ck_rv_t * c_getfunctionstatus_3_svc();
+#define c_CancelFunction ((rpc_uint)69)
+extern  rpc_ck_rv_t * c_cancelfunction_3();
+extern  rpc_ck_rv_t * c_cancelfunction_3_svc();
+#define c_LoadModule ((rpc_uint)70)
+extern  rpc_ck_rv_t * c_loadmodule_3();
+extern  rpc_ck_rv_t * c_loadmodule_3_svc();
+#endif /* Old Style C */
 
 #endif /* !_PKCS11_RPC_H_RPCGEN */
